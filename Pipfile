@@ -6,6 +6,11 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+opencv-python = "*"
+numpy = "*"
+jupyter = "*"
+keras = "*"
+scipy = "*"
 
 [requires]
 python_version = "3.6"
