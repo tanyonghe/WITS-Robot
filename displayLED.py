@@ -17,24 +17,25 @@ virtual = viewport(device, width=32, height=16)
 #show_message(device, 'Raspberry Pi MAX7219', fill="white", font=proportional(LCD_FONT), scroll_delay=0.08)
 
 
-try:
-    emotion_value = 0
-	
-    while True:
-        with canvas(virtual) as draw:
-            if emotion_value == 0:
-                text(draw, (0, 0), "O w O", fill="orange", font=proportional(CP437_FONT))
-            if emotion_value == 1:
-                text(draw, (2, 0), "T n T", fill="orange", font=proportional(CP437_FONT))
-            if emotion_value == 2:
-                text(draw, (0, 0), "^ u ^", fill="orange", font=proportional(CP437_FONT))
-            if emotion_value == 3:
-                text(draw, (2, 0), "> _ <", fill="orange", font=proportional(CP437_FONT))
-            if emotion_value == 4:
-                text(draw, (1, 0), "- _ -", fill="orange", font=proportional(CP437_FONT))
+def displayLED(val):
+	try:
+		with canvas(virtual) as draw:
+			if val == 0:
+				text(draw, (0, 0), "O w O", fill="orange", font=proportional(CP437_FONT))
+			if val == 1:
+				text(draw, (2, 0), "T n T", fill="orange", font=proportional(CP437_FONT))
+			if val == 2:
+				text(draw, (0, 0), "^ u ^", fill="orange", font=proportional(CP437_FONT))
+			if val == 3:
+				text(draw, (2, 0), "> w <", fill="orange", font=proportional(CP437_FONT))
+			if val == 4:
+				text(draw, (1, 0), "- _ -", fill="orange", font=proportional(CP437_FONT))
 
-            emotion_value = (emotion_value + 1) % 5
-        time.sleep(1)
-except KeyboardInterrupt:
-    GPIO.cleanup()
-	
+
+	except KeyboardInterrupt:
+		GPIO.cleanup()
+
+		
+while True:
+	displayLED()
+	time.sleep(1)
