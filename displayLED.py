@@ -1,4 +1,3 @@
-import time
 import RPi.GPIO as GPIO
 from time import sleep, strftime
 from datetime import datetime
@@ -35,7 +34,13 @@ def displayLED(val):
 	except KeyboardInterrupt:
 		GPIO.cleanup()
 
+def main():
+	val = 0
+	while True:
+		displayLED()
+		sleep(1)
+		val = (val + 1) % 5
+
 		
-while True:
-	displayLED()
-	time.sleep(1)
+if __name__ == "__main__":
+	main()
