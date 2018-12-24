@@ -2,13 +2,11 @@ import pickle
 
 
 def print_timing_activity(timing, activity):
-	timing_activity_text = "It is now " + timing + ". Activity: " + activity
-	print(timing_activity)
+	print(f"It is now {timing}. Activity: {activity}")
 
 	
 def print_timing(timing):
-	timing_text = "It is now " + timing + "."
-	print(timing_text)
+	print(f"It is now {timing}.")
 
 
 def is_valid_time(timing):
@@ -45,7 +43,7 @@ def update_schedule_file(file_path, schedule):
     
 def remove_from_schedule(timing, schedule, file_path):
 	if not is_valid_time(timing):
-		print(activity, "at", timing, "is NOT successfully added.")
+		print(f"{activity} at {timing} is NOT successfully added.")
 		return
 		
 	if not timing_exists(timing, schedule):
@@ -54,14 +52,14 @@ def remove_from_schedule(timing, schedule, file_path):
 		activity = schedule[timing]
 		schedule.pop(timing)
 		update_schedule_file(file_path, schedule)
-		print(activity, "at", timing, "successfully removed.")
+		print(f"{activity} at {timing} successfully removed.")
 		
 	return
     
     
 def add_to_schedule(timing, activity, schedule, file_path):
 	if not is_valid_time(timing):
-		print(activity, "at", timing, "is NOT successfully added.")
+		print(f"{activity} at {timing} is NOT successfully added.")
 		return
 	
 	if timing_exists(timing, schedule):
@@ -69,7 +67,7 @@ def add_to_schedule(timing, activity, schedule, file_path):
 	else:
 		schedule[timing] = activity
 		update_schedule_file(file_path, schedule)
-		print(activity, "at", timing, "successfully added.")
+		print(f"{activity} at {timing} successfully added.")
 		
 	return
 
