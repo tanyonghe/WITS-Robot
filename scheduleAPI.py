@@ -3,7 +3,7 @@ import pickle
 
 def print_timing_activity(timing, activity):
 	timing_activity_text = "It is now " + timing + ". Activity: " + activity
-	print(timing_activity)
+	print(timing_activity_text)
 
 	
 def print_timing(timing):
