@@ -1,14 +1,28 @@
 import pickle
+import sys
+
+
+def print_to_screen(text):
+	sys.stdout.write(text)
+	sys.stdout.flush()
+
+def clear_screen_text(text):
+	text_length = len(text)
+	text_buffer = ' ' * text_length
+	sys.stdout.write('\r')
+	sys.stdout.write(text_buffer)
+	sys.stdout.write('\r')
+	sys.stdout.flush()
 
 
 def print_timing_activity(timing, activity):
-	timing_activity_text = "It is now " + timing + ". Activity: " + activity
-	print(timing_activity_text)
+	timing_activity_text = "\nIt is now " + timing + ". Activity: " + activity + "\n"
+	print_to_screen(timing_activity_text)
 
 	
 def print_timing(timing):
-	timing_text = "It is now " + timing + "."
-	print(timing_text)
+	timing_text = "Current Time: " + timing
+	print_to_screen(timing_text)
 
 
 def is_valid_time(timing):
