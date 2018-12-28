@@ -1,9 +1,10 @@
-import datetime
+import datetime as dt
 from time import sleep
 
 #from displayLED import *
 from mediaAPI import *
 from scheduleAPI import *
+from webcam_gui import *
     
     
 def main():
@@ -13,7 +14,7 @@ def main():
 	activity_alert = 1  # alerts once for a certain activity
     
 	while True:
-		current_time = datetime.datetime.now().strftime("%H:%M")
+		current_time = dt.datetime.now().strftime("%H:%M")
 		print_to_screen("Current Time: " + current_time)
         
 		if timing_exists(current_time, schedule):
@@ -27,7 +28,7 @@ def main():
 				#displayLED(0)
 				play_audio('./sounds/activity.wav')
 				# TODO: Add in physical action
-				# TODO: Insert while loop for game here.
+				initialize_webcam_gui()
 				# TODO: Add in noise and action if activity is not completed.
 				
                 
@@ -47,7 +48,7 @@ def main():
 			else:
 				hourly_alert = 1
 				#displayLED(2)
-				play_audio('./sounds/angry.wav')
+				#play_audio('./sounds/angry.wav')
 				
 			sleep(1)
 			clear_screen_text("Current Time: " + current_time)

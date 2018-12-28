@@ -1,9 +1,10 @@
-import datetime
+import datetime as dt
 from time import sleep
 
 #from displayLED import *
 from mediaAPI import *
 from scheduleAPI import *
+from webcam_gui import *
 
 
 def initialize_demo_schedule():
@@ -45,7 +46,7 @@ def main():
 				#displayLED(0)
 				play_audio('./sounds/activity.wav')
 				# TODO: Add in physical action
-				# TODO: Insert while loop for game here.
+				initialize_webcam_gui()
 				# TODO: Add in noise and action if activity is not completed.
                 
 		else:
@@ -64,9 +65,9 @@ def main():
 			else:
 				hourly_alert = 1
 				#displayLED(2)
-				play_audio('./sounds/angry.wav')
+				#play_audio('./sounds/angry.wav')
 				
-			#sleep(1)
+			sleep(1)
 			clear_screen_text("Current Time: " + current_time)
 
         
