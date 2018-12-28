@@ -12,7 +12,7 @@ def record_webcam():
 	current_datetime = dt.datetime.now().strftime("%Y-%m-%d_%H-%M")
 	current_datetime = '2019-01-07_09-35'
 	fourcc = cv2.VideoWriter_fourcc(*'XVID')
-	out = cv2.VideoWriter('./videos/' + current_datetime, fourcc, 20.0, (640,480))
+	out = cv2.VideoWriter('./videos/' + current_datetime + '.avi', fourcc, 20.0, (640,480))
 
 	while(cap.isOpened()):
 		ret, frame = cap.read()
