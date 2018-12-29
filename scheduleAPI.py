@@ -1,5 +1,21 @@
+import logging
+import os
 import pickle
 import sys
+
+
+path = './logs'
+name = '/scheduleAPI.log'
+access_rights = 0o755
+
+try:  
+    os.mkdir(path, access_rights)
+except OSError:  
+    pass
+else:  
+    logging.info("Successfully created the directory %s" % path)
+
+logging.basicConfig(filename=path+name, filemode='w', format='%(asctime)s %(message)s', level=logging.INFO)
 
 
 def print_to_screen(text):
@@ -33,16 +49,16 @@ def is_valid_time(timing):
 			HH = int(HH)
 			MM = int(MM)
 		else:
-			print("Error: HH and MM values should be numerical.")
+			logging.info("HH and MM values should be numerical.")
 			return False
 		
 		if HH < 24 or MM < 60:
 			return True
 		else:
-			print("Error: HH should be below 24 and MM should be below 60.")
+			logging.info("HH should be below 24 and MM should be below 60.")
 			return False
 	else:
-		print("Error: Timing should be in HH:MM format.")
+		logging.info("Timing should be in HH:MM format.")
 		
 	return False
 	
@@ -59,31 +75,31 @@ def update_schedule_file(file_path, schedule):
     
 def remove_from_schedule(timing, schedule, file_path):
 	if not is_valid_time(timing):
-		print(activity, "at", timing, "is NOT successfully added.")
+		logging.info(activity, "at", timing, "is NOT successfully added.")
 		return
 		
 	if not timing_exists(timing, schedule):
-		print("Error: No activity exists at that timing.")
+		logging.info("No activity exists at that timing.")
 	else:
 		activity = schedule[timing]
 		schedule.pop(timing)
 		update_schedule_file(file_path, schedule)
-		print(activity, "at", timing, "successfully removed.")
+		logging.info(activity, "at", timing, "successfully removed.")
 		
 	return
     
     
 def add_to_schedule(timing, activity, schedule, file_path):
 	if not is_valid_time(timing):
-		print(activity, "at", timing, "is NOT successfully added.")
+		logging.info(activity, "at", timing, "is NOT successfully added.")
 		return
 	
 	if timing_exists(timing, schedule):
-		print("Error: An activity already exists at that timing.")
+		logging.info("An activity already exists at that timing.")
 	else:
 		schedule[timing] = activity
 		update_schedule_file(file_path, schedule)
-		print(activity, "at", timing, "successfully added.")
+		logging.info(activity, "at", timing, "successfully added.")
 		
 	return
 
@@ -103,23 +119,23 @@ def test_case_1():
     
     # Expected to pass
 	add_to_schedule("10:30", "Game 1", test_schedule, './data/test_schedule')
-	print(test_schedule)
+	logging.debug(test_schedule)
 	add_to_schedule("14:15", "Game 2", test_schedule, './data/test_schedule')
-	print(test_schedule)
+	logging.debug(test_schedule)
 	add_to_schedule("16:45", "Game 3", test_schedule, './data/test_schedule')
-	print(test_schedule)
+	logging.debug(test_schedule)
 	add_to_schedule("21:00", "Game 4", test_schedule, './data/test_schedule')
-	print(test_schedule)
+	logging.debug(test_schedule)
 	remove_from_schedule("16:45", test_schedule, './data/test_schedule')
-	print(test_schedule)
+	logging.debug(test_schedule)
     
     # Expected to fail as timing already exists in schedule
 	add_to_schedule("21:00", "Game 5", test_schedule, './data/test_schedule')
-	print(test_schedule)
+	logging.debug(test_schedule)
     
     # Expected to fail as timing/activity does not exist
 	remove_from_schedule("10:00", test_schedule, './data/test_schedule')
-	print(test_schedule)   
+	logging.debug(test_schedule)   
     
 	return
     

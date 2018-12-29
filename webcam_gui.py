@@ -1,8 +1,18 @@
 import cv2
 import datetime as dt
 import numpy as np
+import os
 import tkinter as tk
 import tkinter.messagebox
+
+
+path = './videos'
+access_rights = 0o755
+
+try:  
+    os.mkdir(path, access_rights)
+except OSError:  
+    pass
 
 
 def record_webcam():
