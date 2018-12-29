@@ -18,10 +18,23 @@ else:
 logging.basicConfig(filename=path+name, filemode='w', format='%(asctime)s %(message)s', level=logging.INFO)
 
 
+def print_next_activity(current_timing, schedule):
+	timings = [key for (key, value) in sorted(schedule.items())]
+	activities = [value for (key, value) in sorted(schedule.items())]
+	timing_index = timings.index(current_timing)
+	if timing_index + 1 >= len(activities):
+		timing_index = 0
+	else:
+		timing_index += 1
+	next_activity_text = "\nNext Activity: " + activities[timing_index] + " at " + timings[timing_index] + "\n"
+	print_to_screen(next_activity_text)
+
+
 def print_to_screen(text):
 	sys.stdout.write(text)
 	sys.stdout.flush()
 
+	
 def clear_screen_text(text):
 	text_length = len(text)
 	text_buffer = ' ' * text_length
@@ -75,7 +88,7 @@ def update_schedule_file(file_path, schedule):
     
 def remove_from_schedule(timing, schedule, file_path):
 	if not is_valid_time(timing):
-		logging.info(activity, "at", timing, "is NOT successfully added.")
+		logging.info(activity + " at " + timing + " is NOT successfully added.")
 		return
 		
 	if not timing_exists(timing, schedule):
@@ -84,14 +97,14 @@ def remove_from_schedule(timing, schedule, file_path):
 		activity = schedule[timing]
 		schedule.pop(timing)
 		update_schedule_file(file_path, schedule)
-		logging.info(activity, "at", timing, "successfully removed.")
+		logging.info(activity + " at " + timing + " successfully removed.")
 		
 	return
     
     
 def add_to_schedule(timing, activity, schedule, file_path):
 	if not is_valid_time(timing):
-		logging.info(activity, "at", timing, "is NOT successfully added.")
+		logging.info(activity + " at " + timing + " is NOT successfully added.")
 		return
 	
 	if timing_exists(timing, schedule):
@@ -99,7 +112,7 @@ def add_to_schedule(timing, activity, schedule, file_path):
 	else:
 		schedule[timing] = activity
 		update_schedule_file(file_path, schedule)
-		logging.info(activity, "at", timing, "successfully added.")
+		logging.info(activity + " at " + timing + " successfully added.")
 		
 	return
 
@@ -112,6 +125,7 @@ def read_schedule(file_path):
 	except:
 		schedule = dict()
 		update_schedule_file(file_path, schedule)
+		return schedule
     
     
 def test_case_1():
