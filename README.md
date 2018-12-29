@@ -22,3 +22,7 @@ We aim to deliver the best interactive robot companion for children suffering fr
 
 ## Our Product
 Head down to Makerthon 2019 on the 7th of January to see our product live!
+
+## Future Developments
+1. Incorporate more games with tracking functionalities
+2. Overclocking for enhanced gaming performance
