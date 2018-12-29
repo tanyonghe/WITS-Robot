@@ -27,9 +27,10 @@ def main():
 				print_timing_activity(current_time, schedule[current_time])
 				#displayLED(0)
 				play_audio('./sounds/activity.wav')
-				# TODO: Add in physical action
-				initialize_webcam_gui()
-				# TODO: Add in noise and action if activity is not completed.
+				initialize_webcam_gui(schedule[current_time])
+				print_next_activity(current_time, schedule)
+				# TODO: Add in noise if activity is not completed.
+				#play_audio('./sounds/angry.wav')
 				
                 
 		else:
@@ -44,11 +45,9 @@ def main():
 					hourly_alert = 0
 					#displayLED(3)
 					play_audio('./sounds/hourly.wav')
-					# TODO: Add in physical action
 			else:
 				hourly_alert = 1
 				#displayLED(2)
-				#play_audio('./sounds/angry.wav')
 				
 			sleep(1)
 			clear_screen_text("Current Time: " + current_time)

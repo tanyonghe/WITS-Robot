@@ -10,10 +10,10 @@ from webcam_gui import *
 def initialize_demo_schedule():
 	demo_schedule = read_schedule('./data/demo_schedule')
     
-	add_to_schedule("09:05", "Game 1", demo_schedule, './data/demo_schedule')
-	add_to_schedule("09:35", "Game 2", demo_schedule, './data/demo_schedule')
-	add_to_schedule("16:45", "Game 3", demo_schedule, './data/demo_schedule')
-	add_to_schedule("21:00", "Game 4", demo_schedule, './data/demo_schedule') 
+	add_to_schedule("09:05", "Stretching Exercises", demo_schedule, './data/demo_schedule')
+	add_to_schedule("09:35", "Play Fomosumo Game", demo_schedule, './data/demo_schedule')
+	add_to_schedule("16:45", "Strength Training", demo_schedule, './data/demo_schedule')
+	add_to_schedule("21:00", "Time to bathe!", demo_schedule, './data/demo_schedule') 
     
 	return demo_schedule
     
@@ -45,9 +45,10 @@ def main():
 				print_timing_activity(current_time, schedule[current_time])
 				#displayLED(0)
 				play_audio('./sounds/activity.wav')
-				# TODO: Add in physical action
-				initialize_webcam_gui()
+				initialize_webcam_gui(schedule[current_time])
+				print_next_activity(current_time, schedule)
 				# TODO: Add in noise and action if activity is not completed.
+				#play_audio('./sounds/angry.wav')
                 
 		else:
 			"""
@@ -61,11 +62,9 @@ def main():
 					hourly_alert = 0
 					#displayLED(3)
 					play_audio('./sounds/hourly.wav')
-					# TODO: Add in physical action
 			else:
 				hourly_alert = 1
 				#displayLED(2)
-				#play_audio('./sounds/angry.wav')
 				
 			sleep(1)
 			clear_screen_text("Current Time: " + current_time)
