@@ -46,7 +46,7 @@ def record_webcam():
 	cv2.destroyAllWindows()
 
     
-def initialize_webcam_gui():
+def initialize_webcam_gui(activity):
 
 
 	def destroy_root():
@@ -57,12 +57,17 @@ def initialize_webcam_gui():
 
 	root = tk.Tk()
 	root.title('Webcam GUI')
-	root.geometry('300x300+0+0')
+	root.geometry('500x300+0+0')
+	root.iconbitmap('./docs/images/dog.ico')
 
-	tk.Label(root, text = 'Press to start recording your activity session.', fg = "white", bg = '#85929e').pack()
-	record_btn = tk.Button(root, text = 'Start Activity', fg = "white", bg = '#85929e', command = record_webcam).pack()
-	tk.Label(root, text = 'Press to end your activity session.', fg = "white", bg = '#85929e').pack()
-	stop_btn = tk.Button(root, text = 'End Activity', fg = "white", bg = '#85929e', command = destroy_root).pack()
+	tk.Label(root, text = 'Current Activity', fg = "white", bg = '#85929e', font=("Helvetica", 14, "bold")).pack()
+	tk.Label(root, text = activity, fg = "white", bg = '#85929e', font=("Helvetica", 14)).pack()
+	tk.Label(root, text = '', fg = "white", bg = '#85929e').pack()
+	tk.Label(root, text = 'Press to start recording your activity session.', fg = "white", bg = '#85929e', font=("Helvetica", 12)).pack()
+	record_btn = tk.Button(root, text = 'Start Activity', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = record_webcam).pack()
+	tk.Label(root, text = '', fg = "white", bg = '#85929e').pack()
+	tk.Label(root, text = 'Press to end your activity session.', fg = "white", bg = '#85929e', font=("Helvetica", 12)).pack()
+	stop_btn = tk.Button(root, text = 'End Activity', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = destroy_root).pack()
 
 	root.config(bg = '#85929e')
 
@@ -70,5 +75,5 @@ def initialize_webcam_gui():
 
 	
 if __name__ == "__main__":
-	initialize_webcam_gui()
+	initialize_webcam_gui("<Insert Activity Here>")
 
