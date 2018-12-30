@@ -1,9 +1,7 @@
 import math
-def euclidean(x, y, z):
-    return math.sqrt(x**2 + y**2 + z**2)
-
 import socket
 from struct import *
+
  
 #UDP_IP = "96.49.100.238"
 #UDP_IP = "127.0.0.1"
@@ -16,6 +14,11 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # UDP
 sock.bind((UDP_IP, UDP_PORT))
  
 queue = [0] * 100
+
+
+def euclidean(x, y, z):
+    return math.sqrt(float(x)**2 + float(y)**2 + float(z)**2)
+
  
 while True:
     data, addr = sock.recvfrom(1024) # buffer size is 1024 bytes
@@ -29,4 +32,3 @@ while True:
     print("A_Y: ", A_Y)
     print("A_Z: ", A_Z)
     print(euclidean(A_X, A_Y, A_Z))
-
