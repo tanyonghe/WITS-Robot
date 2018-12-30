@@ -2,9 +2,9 @@ import datetime as dt
 from time import sleep
 
 #from displayLED import *
-from mediaAPI import *
+import mediaAPI as mAPI
 from scheduleAPI import *
-from webcam_gui import *
+import webcam_gui as wgui
 
 
 def initialize_demo_schedule():
@@ -44,11 +44,9 @@ def main():
 				activity_alert = 0
 				print_timing_activity(current_time, schedule[current_time])
 				#displayLED(0)
-				play_audio('./sounds/activity.wav')
-				initialize_webcam_gui(schedule[current_time])
+				mAPI.play_audio('./sounds/activity.wav')
+				wgui.initialize_webcam_gui(schedule[current_time])
 				print_next_activity(current_time, schedule)
-				# TODO: Add in noise and action if activity is not completed.
-				#play_audio('./sounds/angry.wav')
                 
 		else:
 			"""
@@ -61,7 +59,7 @@ def main():
 				if hourly_alert:
 					hourly_alert = 0
 					#displayLED(3)
-					play_audio('./sounds/hourly.wav')
+					mAPI.play_audio('./sounds/hourly.wav')
 			else:
 				hourly_alert = 1
 				#displayLED(2)
