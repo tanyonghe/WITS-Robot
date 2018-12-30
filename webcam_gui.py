@@ -1,10 +1,10 @@
 import cv2
 import datetime as dt
+import mediaAPI as mAPI
 import numpy as np
 import os
 import tkinter as tk
 import tkinter.messagebox
-
 
 path = './videos'
 access_rights = 0o755
@@ -27,7 +27,7 @@ def record_webcam():
 	while(cap.isOpened()):
 		ret, frame = cap.read()
 		if ret == True:
-			frame = cv2.flip(frame,0)
+			#frame = cv2.flip(frame,0)
 
 			# write the flipped frame
 			out.write(frame)
@@ -53,12 +53,19 @@ def initialize_webcam_gui(activity):
 		destroy = tkinter.messagebox.askquestion('Exit', 'Do you wish to exit?')
 		if destroy == 'yes':
 			root.destroy()
+			
+	
+	def play_audio(file_path):
+		def play():
+			mAPI.play_audio(file_path)
+			root.after(300000, play_audio('./sounds/angry.wav'))
+		return play
 
 
 	root = tk.Tk()
 	root.title('Webcam GUI')
 	root.geometry('500x300+0+0')
-	root.iconbitmap('./docs/images/dog.ico')
+	#root.iconbitmap('./docs/images/dog.ico')
 
 	tk.Label(root, text = 'Current Activity', fg = "white", bg = '#85929e', font=("Helvetica", 14, "bold")).pack()
 	tk.Label(root, text = activity, fg = "white", bg = '#85929e', font=("Helvetica", 14)).pack()
@@ -70,7 +77,8 @@ def initialize_webcam_gui(activity):
 	stop_btn = tk.Button(root, text = 'End Activity', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = destroy_root).pack()
 
 	root.config(bg = '#85929e')
-
+	
+	root.after(300000, play_audio('./sounds/angry.wav'))  # plays audio every 5 min or 300000 ms
 	root.mainloop()
 
 	
