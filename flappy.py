@@ -380,7 +380,7 @@ def mainGame(movementInfo):
 
 
 def showGameOverScreen(crashInfo):
-    """crashes the player down ans shows gameover image"""
+    """crashes the player down and shows gameover image"""
     score = crashInfo['score']
     playerx = SCREENWIDTH * 0.2
     playery = crashInfo['y']
@@ -431,6 +431,7 @@ def showGameOverScreen(crashInfo):
 
         # draw sprites
         SCREEN.blit(IMAGES['background'], (0,0))
+        SCREEN.blit(IMAGES['gameover'], (50,125))
 
         for uPipe, lPipe in zip(upperPipes, lowerPipes):
             SCREEN.blit(IMAGES['pipe'][0], (uPipe['x'], uPipe['y']))
