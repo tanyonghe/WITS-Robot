@@ -56,10 +56,8 @@ def initialize_webcam_gui(activity):
 			root.destroy()
 			
 			
-	def play_game():
-		play = tkinter.messagebox.askquestion('Flappy Bird', 'Make sure SensorUDP is on before playing!')
-		if play == 'yes':
-			flappy.main()
+	def play_flappy():
+		flappy.main()
 			
 	
 	def play_audio(file_path):
@@ -84,7 +82,7 @@ def initialize_webcam_gui(activity):
 	stop_btn = tk.Button(root, text = 'End Activity', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = destroy_root).pack()
 	tk.Label(root, text = '', fg = "white", bg = '#85929e').pack()
 	tk.Label(root, text = '', fg = "white", bg = '#85929e').pack()
-	flappy_btn = tk.Button(root, text = 'Play Flappy Bird!', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = play_game).pack()
+	flappy_btn = tk.Button(root, text = 'Play Flappy Bird!', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = play_flappy).pack()
 
 	root.config(bg = '#85929e')
 	
