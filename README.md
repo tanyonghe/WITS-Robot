@@ -1,28 +1,74 @@
 # Interactive Robot Tracking System
 
-### The best interactive robot companion for your children.
+The best interactive robot companion for your children.  
+To understand more about what the project is about, please refer to our [Project Desription](docs/PROJECT.md).
 
-## The Problem
-There is lack of motivation for children to exercise especially if children suffering from cerebral palsy experience discomfort, pain, or laziness.
+## Getting Started
 
-## Our Target
-We plan to target children below the age of 12 who are suffering from mild to moderate conditions of cerebral palsy.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-## Our Purpose
-We hope to encourage children suffering from cerebral palsy to move around and exercise more in order to prevent muscular atrophy and strengthen their muscles instead, therefore mitigating the effects of their cerebral palsy condition.
+### Prerequisites
 
-## Our Solution
-We aim to deliver the best interactive robot companion for children suffering from cerebral palsy to be more independent in fighting against their own conditions through interactive and fun ways.
+* [Python 3.5.3 or above](https://www.python.org/)
 
-### Features
-1. Gamification
-2. Exercise Tracking
-3. Reminder System
-4. Dataloop Feedback
+### Installing
 
-## Our Product
-Head down to Makerthon 2019 on the 7th of January to see our product live!
+1. Clone the directory
+2. Enter the directory by typing in this command
 
-## Future Developments
-1. Incorporate more games with tracking functionalities
-2. Overclocking for enhanced gaming performance
+```
+cd brownie
+```
+
+3. Install prerequisite libraries with setup.sh:
+
+```
+./setup.sh
+```
+
+## Usage
+
+1. To run the main program, double click/tap on the main.sh script or enter the command:
+```
+./main.sh
+```
+
+To run the demo program instead, double click/tap on the demo.sh script or enter the command:
+```
+./demo.sh
+```
+
+
+## Built With
+
+* Languages
+    * [Python 3.5.3](https://www.python.org/) - For its standard libraries.
+
+* Frameworks and Libraries
+    * [Pygame](https://www.pygame.org/news) - For running games.
+
+
+## Contributing
+
+No public contributions expected as of now.
+
+## Versioning
+
+For the versions available, see the [tags on this repository](https://github.com/x3tsunayh/brownie/tags). 
+
+## Authors
+
+* **Tan Yong He** - [x3tsunayh](https://github.com/x3tsunayh)
+* **Wong Ding Feng** - [WongDingFeng](https://github.com/WongDingFeng)
+
+See also the list of [contributors](https://github.com/x3tsunayh/brownie/contributors) who participated in this project.
+
+## License
+
+No license as of now.
+
+## Acknowledgments
+
+* Hat tip to anyone whose code was used
+* Inspiration
+* [FlapPyBird](https://github.com/sourabhv/FlapPyBird)
