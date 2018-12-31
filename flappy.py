@@ -76,13 +76,16 @@ def retrieve_UDP_values():
     UDP_IP = socket.gethostbyname(socket.gethostname())
     UDP_PORT = 5001
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    sock.settimeout(.02)
     sock.bind((UDP_IP, UDP_PORT))
-    data, addr = sock.recvfrom(1024)
-    sock.close()
-    A_X = "%1.4f" %unpack_from ('!f', data, 0)
-    A_Y = "%1.4f" %unpack_from ('!f', data, 4)
-    A_Z = "%1.4f" %unpack_from ('!f', data, 8)
-    return euclidean(float(A_X), float(A_Y), float(A_Z))
+    try:
+        data, addr = sock.recvfrom(1024)
+        A_X = "%1.4f" %unpack_from ('!f', data, 0)
+        A_Y = "%1.4f" %unpack_from ('!f', data, 4)
+        A_Z = "%1.4f" %unpack_from ('!f', data, 8)
+        return euclidean(float(A_X), float(A_Y), float(A_Z))
+    except socket.timeout:
+        return 0
 	
 
 def main():
