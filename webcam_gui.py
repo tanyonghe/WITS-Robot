@@ -4,6 +4,7 @@ import flappy
 import mediaAPI as mAPI
 import numpy as np
 import os
+import shakeit
 import tkinter as tk
 import tkinter.messagebox
 
@@ -49,15 +50,31 @@ def record_webcam():
     
 def initialize_webcam_gui(activity):
 
-
-	def destroy_root():
-		destroy = tkinter.messagebox.askquestion('Exit', 'Do you wish to exit?')
-		if destroy == 'yes':
-			root.destroy()
+	
+	def destroy_window(window):
+		def des_win():
+			if window == root:
+				destroy = tkinter.messagebox.askquestion('Exit', 'Do you wish to exit?')
+				if destroy == 'yes':
+					window.destroy()
+			else:
+				window.destroy()
+		return des_win
 			
 			
-	def play_flappy():
-		flappy.main()
+	def play_games():
+		games = tk.Tk()
+		games.title('Games')
+		games.geometry('500x300+0+0')
+		tk.Label(games, text = 'Games', fg = "white", bg = '#85929e', font=("Helvetica", 14, "bold")).pack()
+		tk.Label(games, text = '', fg = "white", bg = '#85929e').pack()
+		tk.Button(games, text = 'Play Shake It!', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = shakeit.main).pack()
+		tk.Label(games, text = '', fg = "white", bg = '#85929e').pack()
+		tk.Button(games, text = 'Play Flappy Bird!', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = flappy.main).pack()
+		tk.Label(games, text = '', fg = "white", bg = '#85929e').pack()
+		tk.Button(games, text = 'Exit Games', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = destroy_window(games)).pack()
+		games.config(bg = '#85929e')
+		games.mainloop()
 			
 	
 	def play_audio(file_path):
@@ -79,10 +96,10 @@ def initialize_webcam_gui(activity):
 	record_btn = tk.Button(root, text = 'Start Activity', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = record_webcam).pack()
 	tk.Label(root, text = '', fg = "white", bg = '#85929e').pack()
 	tk.Label(root, text = 'Press to end your activity session.', fg = "white", bg = '#85929e', font=("Helvetica", 12)).pack()
-	stop_btn = tk.Button(root, text = 'End Activity', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = destroy_root).pack()
+	stop_btn = tk.Button(root, text = 'End Activity', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = destroy_window(root)).pack()
 	tk.Label(root, text = '', fg = "white", bg = '#85929e').pack()
 	tk.Label(root, text = '', fg = "white", bg = '#85929e').pack()
-	flappy_btn = tk.Button(root, text = 'Play Flappy Bird!', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = play_flappy).pack()
+	games_btn = tk.Button(root, text = 'Play Games!', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = play_games).pack()
 
 	root.config(bg = '#85929e')
 	
