@@ -1,5 +1,6 @@
 import cv2
 import datetime as dt
+import flappy
 import mediaAPI as mAPI
 import numpy as np
 import os
@@ -54,6 +55,12 @@ def initialize_webcam_gui(activity):
 		if destroy == 'yes':
 			root.destroy()
 			
+			
+	def play_game():
+		play = tkinter.messagebox.askquestion('Flappy Bird', 'Make sure SensorUDP is on before playing!')
+		if play == 'yes':
+			flappy.main()
+			
 	
 	def play_audio(file_path):
 		def play():
@@ -75,6 +82,9 @@ def initialize_webcam_gui(activity):
 	tk.Label(root, text = '', fg = "white", bg = '#85929e').pack()
 	tk.Label(root, text = 'Press to end your activity session.', fg = "white", bg = '#85929e', font=("Helvetica", 12)).pack()
 	stop_btn = tk.Button(root, text = 'End Activity', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = destroy_root).pack()
+	tk.Label(root, text = '', fg = "white", bg = '#85929e').pack()
+	tk.Label(root, text = '', fg = "white", bg = '#85929e').pack()
+	flappy_btn = tk.Button(root, text = 'Play Flappy Bird!', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = play_game).pack()
 
 	root.config(bg = '#85929e')
 	
