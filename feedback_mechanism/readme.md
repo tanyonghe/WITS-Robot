@@ -1,20 +1,21 @@
 
 # Table of Contents
 
-1.  [Feedback Mechanism Module](#org4807db9)
-2.  [LED](#org61ee650)
-    1.  [Setup](#org4b47418)
-        1.  [Physical Hardware](#org3d4c88f)
-        2.  [Software Installation](#org0bef282)
-3.  [Speaker](#org51c3572)
-    1.  [Setup](#orgea86e34)
-        1.  [Physical Hardware](#org30a3b4d)
-        2.  [Software Installation](#org79e3370)
-        3.  [Bluetooth Pairing](#orgbfe5967)
+1.  [Feedback Mechanism Module](#org69014da)
+2.  [LED](#org077f3f8)
+    1.  [Setup](#org563dae6)
+        1.  [Physical Hardware](#org6f54b7f)
+        2.  [Software Installation](#orgd68d534)
+        3.  [how to use?](#orge0e8af4)
+3.  [Speaker](#org18e141c)
+    1.  [Setup](#org0ee6211)
+        1.  [Physical Hardware](#org0139f31)
+        2.  [Software Installation](#org2be10aa)
+        3.  [Bluetooth Pairing](#org2a9858a)
 
 
 
-<a id="org4807db9"></a>
+<a id="org69014da"></a>
 
 # Feedback Mechanism Module
 
@@ -24,17 +25,17 @@ feedback mechanism consist of:
 -   led
 
 
-<a id="org61ee650"></a>
+<a id="org077f3f8"></a>
 
 # LED
 
 
-<a id="org4b47418"></a>
+<a id="org563dae6"></a>
 
 ## Setup
 
 
-<a id="org3d4c88f"></a>
+<a id="org6f54b7f"></a>
 
 ### Physical Hardware
 
@@ -74,7 +75,7 @@ feedback mechanism consist of:
 </table>
 
 
-<a id="org0bef282"></a>
+<a id="orgd68d534"></a>
 
 ### Software Installation
 
@@ -86,12 +87,38 @@ feedback mechanism consist of:
         sudo pip install rpi_ws281x
 
 
-<a id="org51c3572"></a>
+<a id="orge0e8af4"></a>
+
+### how to use?
+
+-   this is helpful <https://github.com/jgarff/rpi_ws281x/blob/master/python/neopixel.py>
+-   examples <https://github.com/jgarff/rpi_ws281x/tree/master/python/examples>
+    -   strand test example useful <https://github.com/jgarff/rpi_ws281x/blob/master/python/examples/strandtest.py>
+
+    from feedback_mechanism import led
+    from neopixel import *
+    
+    # self defined colors
+    # def Color(red, green, blue, white = 0):
+    unicorn = Color(255,0,0,255)
+    
+    # you need to hold on to the strip object to tell it which led to change
+    # take a look at neopixel.py for help 
+    strip = led.init()
+    # def setPixelColor(self, n, color):
+    strip.setPixelColor(1, unicorn)
+    # def setPixelColorRGB(self, n, red, green, blue, white = 0):
+    strip.setPixelColorRGB(1, 255, 0, 0, 255)
+    # def setBrightness(self, brightness):
+    # def getBrightness(self):
+
+
+<a id="org18e141c"></a>
 
 # Speaker
 
 
-<a id="orgea86e34"></a>
+<a id="org0ee6211"></a>
 
 ## Setup
 
@@ -104,7 +131,7 @@ use bluetooth to pair it to the amplifier
 -   might need to blacklist the BMC-2835
 
 
-<a id="org30a3b4d"></a>
+<a id="org0139f31"></a>
 
 ### Physical Hardware
 
@@ -112,7 +139,7 @@ use bluetooth to pair it to the amplifier
 -   wire the speaker to the amplifier and bam.
 
 
-<a id="org79e3370"></a>
+<a id="org2be10aa"></a>
 
 ### Software Installation
 
@@ -129,7 +156,7 @@ WS2812 to work, not sure
     -   Then "OK".
 
 
-<a id="orgbfe5967"></a>
+<a id="org2a9858a"></a>
 
 ### Bluetooth Pairing
 

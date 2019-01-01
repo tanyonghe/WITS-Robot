@@ -20,6 +20,28 @@
       #+BEGIN_SRC sh
         sudo pip install rpi_ws281x
       #+END_SRC
+*** how to use?
+    - this is helpful https://github.com/jgarff/rpi_ws281x/blob/master/python/neopixel.py
+    - examples https://github.com/jgarff/rpi_ws281x/tree/master/python/examples
+      - strand test example useful https://github.com/jgarff/rpi_ws281x/blob/master/python/examples/strandtest.py
+    #+BEGIN_SRC python
+      from feedback_mechanism import led
+      from neopixel import *
+
+      # self defined colors
+      # def Color(red, green, blue, white = 0):
+      unicorn = Color(255,0,0,255)
+
+      # you need to hold on to the strip object to tell it which led to change
+      # take a look at neopixel.py for help 
+      strip = led.init()
+      # def setPixelColor(self, n, color):
+      strip.setPixelColor(1, unicorn)
+      # def setPixelColorRGB(self, n, red, green, blue, white = 0):
+      strip.setPixelColorRGB(1, 255, 0, 0, 255)
+      # def setBrightness(self, brightness):
+      # def getBrightness(self):
+    #+END_SRC
 * Speaker
 ** Setup
    We would go with the physical method first. However I have read
