@@ -13,20 +13,11 @@ ifdef::env-github[]
 endif::[]
 :repoURL: https://github.com/x3tsunayh/brownie
 
-By: ``      Since: `Dec 2018`      Licence: ``
+By: `Tan Yong He`      Since: `Dec 2018`      Licence: `N/A`
 
 == Introduction
 
-Add intro here
-
-== Quick Start
-
-.  Ensure you have Python version `3.5.3` or later installed in your Computer.
-
-.  Refer to <<Features>> for details of the software's functionalities.
-
-[[Features]]
-== Features
+TODO: Add introduction here.
 
 ====
 *Overview*
@@ -40,11 +31,24 @@ Add intro here
 
 ====
 
+== Quick Start
+
+.  Ensure you have Python version `3.5.3` or later installed in your Computer.
+
+.  Refer to <<Games>> for details of the available games.
+
+[[Games]]
+== Games
+
 //tag::shakeitgame[]
 
 === Shake It Game
 
 Shake it to 100 as fast as possible!
+
++
+image::shakeit_screenshot.png[width="790"]
++
 
 ****
 * Shake your device to start the game and raise the number.
@@ -60,6 +64,10 @@ Shake it to 100 as fast as possible!
 === Flappy Bird Game
 
 Flap your way through the game!
+
++
+image::flappy_screenshot.png[width="790"]
++
 
 ****
 * Shake your device to start the game and control the flappy bird.
