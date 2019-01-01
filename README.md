@@ -1,7 +1,10 @@
 # Interactive Robot Tracking System
 
 The best interactive robot companion for your children.  
-To understand more about what the project is about, please refer to our [Project Desription](docs/PROJECT.md).
+
+[Project Description](docs/PROJECT.md)
+[User Guide](docs/UserGuide.md)
+
 
 ## Getting Started
 
