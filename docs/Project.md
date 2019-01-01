@@ -1,4 +1,4 @@
-# WiFi Interactive Tracking Sidekick Robot - Project Description  
+# WITS Robot - Project Description  
 
 ### The WITS Robot is an interactive robot companion that empowers children to go on superhero adventures.  
 

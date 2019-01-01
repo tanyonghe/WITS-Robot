@@ -1,4 +1,4 @@
-# Interactive Tracking Sidekick Robot - User Guide  
+# WITS Robot - User Guide  
 
 By: `Tan Yong He`      Since: `Dec 2018`      Licence: `N/A`
 
