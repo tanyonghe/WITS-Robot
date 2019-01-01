@@ -1,4 +1,4 @@
-# Brownie - User Guide
+# User Guide
 
 By: `Tan Yong He`      Since: `Dec 2018`      Licence: `N/A`
 
@@ -7,10 +7,8 @@ By: `Tan Yong He`      Since: `Dec 2018`      Licence: `N/A`
 
 TODO: Add introduction here.
 
-Interested? Jump to the <<Quick Start>> to get started. Enjoy!
 
-####
-*Overview*
+### Overview
 
 * Program displays current time until it is time for an activity
 * Upon time for an activity, the GUI will appear
@@ -19,25 +17,24 @@ Interested? Jump to the <<Quick Start>> to get started. Enjoy!
 * The user can also play games using the `Play Games!` button
 * The games require a device that can send device motions via UDP to the program (e.g. a smartphone using SensorUDP)
 
-####
-
 
 ## Quick Start
 
-.  Ensure you have Python version `3.5.3` or later installed in your Computer.
+* Ensure you have Python version `3.5.3` or later installed in your Computer.
 
-.  Refer to <<Games>> for details of the available games.
+* Refer to <<Games>> for details of the available games.
 
-[[Games]]
+
 ## Games
 
+
+****
 ### Shake It Game
 
 Shake it to 100 as fast as possible!
 
-![alt text](docs/images/shakeit_screenshot.png)
+![](docs/images/shakeit_screenshot.png)
 
-****
 * Shake your device to start the game and raise the number.
 * The more you shake, the higher the number goes.
 * The aim is to reach 100 as fast as possible.
@@ -45,13 +42,13 @@ Shake it to 100 as fast as possible!
 ****
 
 
+****
 ### Flappy Bird Game
 
 Flap your way through the game!
 
-![alt text](docs/images/flappy_screenshot.png)
+![](docs/images/flappy_screenshot.png)
 
-****
 * Shake your device to start the game and control the flappy bird.
 * The more you shake, the higher the flappy bird goes.
 * Keep the flappy bird in the middle of the screen and avoid the pipes as they come along.
