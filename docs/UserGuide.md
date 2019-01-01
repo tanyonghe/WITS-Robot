@@ -5,7 +5,7 @@ By: `Tan Yong He`      Since: `Dec 2018`      Licence: `N/A`
 
 ## Introduction
 
-This software is meant to perform the following functionalities:
+This software aims to perform the following functionalities:
 
 * Program displays current time until it is time for an activity
 * Upon time for an activity, the GUI will appear
