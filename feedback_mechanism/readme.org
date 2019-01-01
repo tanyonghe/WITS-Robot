@@ -1,0 +1,41 @@
+#+FILETAGS: :feedback:
+* Feedback Mechanism Module
+  feedback mechanism consist of:
+  - speaker
+  - led
+* LED
+** Setup
+*** Physical Hardware
+    | LED  | PI     |
+    |------+--------|
+    | +ve  | 5v     |
+    | -ve  | ground |
+    | data | pin 18 |
+*** Software Installation
+    - build tools, may be able to skip
+      #+BEGIN_SRC sh
+        sudo apt-get install build-essential python-dev python-pip unzip wget scons swig
+      #+END_SRC
+    - installation
+      #+BEGIN_SRC sh
+        wget https://github.com/jgarff/rpi_ws281x/archive/master.zip
+        unzip master.zip
+        cd rpi_ws281x-master
+        sudo scons
+        sudo pip install rpi_ws281x
+      #+END_SRC
+* Speaker
+** setup
+*** Physical Hardware
+    - connect RCA jack on raspberrypi to TDA7492P amplifier
+    - wire the speaker to the amplifier and bam.
+*** Software Installation
+    - I have read some tutorials that say need to disable audio for
+    WS2812 to work, not sure
+    - also audio might be routing through HDMI could try this to solve
+      #+BEGIN_SRC sh
+        raspi-config
+      #+END_SRC
+      - Select 7 Advanced Options, then Audio.
+      - Select "Force 3.5mm ('headphone') jack".
+      - Then "OK".
