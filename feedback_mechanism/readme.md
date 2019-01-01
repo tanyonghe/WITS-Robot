@@ -1,19 +1,19 @@
 
 # Table of Contents
 
-1.  [Feedback Mechanism Module](#org1fd8bec)
-2.  [LED](#org7fa24c8)
-    1.  [Setup](#orge0403b8)
-        1.  [Physical Hardware](#orgbce038c)
-        2.  [Software Installation](#org686d2ee)
-3.  [Speaker](#org727cf3c)
-    1.  [Setup](#org2c6862a)
-        1.  [Physical Hardware](#orgfa335d2)
-        2.  [Software Installation](#org65c3dc4)
+1.  [Feedback Mechanism Module](#orgc8caa95)
+2.  [LED](#org0ad4397)
+    1.  [Setup](#org3e3eb25)
+        1.  [Physical Hardware](#orgaaff337)
+        2.  [Software Installation](#orgcb62da2)
+3.  [Speaker](#orga4d5032)
+    1.  [Setup](#orgd90386e)
+        1.  [Physical Hardware](#org517ef9b)
+        2.  [Software Installation](#orgaff3c67)
 
 
 
-<a id="org1fd8bec"></a>
+<a id="orgc8caa95"></a>
 
 # Feedback Mechanism Module
 
@@ -23,17 +23,17 @@ feedback mechanism consist of:
 -   led
 
 
-<a id="org7fa24c8"></a>
+<a id="org0ad4397"></a>
 
 # LED
 
 
-<a id="orge0403b8"></a>
+<a id="org3e3eb25"></a>
 
 ## Setup
 
 
-<a id="orgbce038c"></a>
+<a id="orgaaff337"></a>
 
 ### Physical Hardware
 
@@ -73,7 +73,7 @@ feedback mechanism consist of:
 </table>
 
 
-<a id="org686d2ee"></a>
+<a id="orgcb62da2"></a>
 
 ### Software Installation
 
@@ -89,17 +89,25 @@ feedback mechanism consist of:
         sudo pip install rpi_ws281x
 
 
-<a id="org727cf3c"></a>
+<a id="orga4d5032"></a>
 
 # Speaker
 
 
-<a id="org2c6862a"></a>
+<a id="orgd90386e"></a>
 
 ## Setup
 
+We would go with the physical method first. However I have read
+some blog post saying that its not possible to play music and
+control the leds at the same time. This is due to the digital logic
+output is based on the BCM-2835. If it cannot work then we have to
+use bluetooth to pair it to the amplifier
 
-<a id="orgfa335d2"></a>
+-   might need to blacklist the BMC-2835
+
+
+<a id="org517ef9b"></a>
 
 ### Physical Hardware
 
@@ -107,7 +115,7 @@ feedback mechanism consist of:
 -   wire the speaker to the amplifier and bam.
 
 
-<a id="org65c3dc4"></a>
+<a id="orgaff3c67"></a>
 
 ### Software Installation
 
