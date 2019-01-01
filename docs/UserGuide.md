@@ -29,7 +29,7 @@ This software is meant to perform the following functionalities:
 
 Shake it to 100 as fast as possible!
 
-![Shake It Screenshot](docs/images/shakeit_screenshot.png)
+![Shake It Screenshot](images/shakeit_screenshot.png)
 
 * Shake your device to start the game and raise the number.
 * The more you shake, the higher the number goes.
@@ -41,7 +41,7 @@ Shake it to 100 as fast as possible!
 
 Flap your way through the game!
 
-![Flappy Screenshot](docs/images/flappy_screenshot.png)
+![Flappy Screenshot](images/flappy_screenshot.png)
 
 * Shake your device to start the game and control the flappy bird.
 * The more you shake, the higher the flappy bird goes.
