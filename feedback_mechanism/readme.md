@@ -1,19 +1,19 @@
 
 # Table of Contents
 
-1.  [Feedback Mechanism Module](#orga336926)
-2.  [LED](#org7866952)
-    1.  [Setup](#orgb0902b7)
-        1.  [Physical Hardware](#org513a6c7)
-        2.  [Software Installation](#orgd839ae5)
-3.  [Speaker](#orge3b1f50)
-    1.  [setup](#orgc228541)
-        1.  [Physical Hardware](#orgc1feeca)
-        2.  [Software Installation](#org524ceb1)
+1.  [Feedback Mechanism Module](#org1fd8bec)
+2.  [LED](#org7fa24c8)
+    1.  [Setup](#orge0403b8)
+        1.  [Physical Hardware](#orgbce038c)
+        2.  [Software Installation](#org686d2ee)
+3.  [Speaker](#org727cf3c)
+    1.  [Setup](#org2c6862a)
+        1.  [Physical Hardware](#orgfa335d2)
+        2.  [Software Installation](#org65c3dc4)
 
 
 
-<a id="orga336926"></a>
+<a id="org1fd8bec"></a>
 
 # Feedback Mechanism Module
 
@@ -23,17 +23,17 @@ feedback mechanism consist of:
 -   led
 
 
-<a id="org7866952"></a>
+<a id="org7fa24c8"></a>
 
 # LED
 
 
-<a id="orgb0902b7"></a>
+<a id="orge0403b8"></a>
 
 ## Setup
 
 
-<a id="org513a6c7"></a>
+<a id="orgbce038c"></a>
 
 ### Physical Hardware
 
@@ -73,7 +73,7 @@ feedback mechanism consist of:
 </table>
 
 
-<a id="orgd839ae5"></a>
+<a id="org686d2ee"></a>
 
 ### Software Installation
 
@@ -89,17 +89,17 @@ feedback mechanism consist of:
         sudo pip install rpi_ws281x
 
 
-<a id="orge3b1f50"></a>
+<a id="org727cf3c"></a>
 
 # Speaker
 
 
-<a id="orgc228541"></a>
+<a id="org2c6862a"></a>
 
-## setup
+## Setup
 
 
-<a id="orgc1feeca"></a>
+<a id="orgfa335d2"></a>
 
 ### Physical Hardware
 
@@ -107,7 +107,7 @@ feedback mechanism consist of:
 -   wire the speaker to the amplifier and bam.
 
 
-<a id="org524ceb1"></a>
+<a id="org65c3dc4"></a>
 
 ### Software Installation
 

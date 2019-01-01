@@ -25,7 +25,7 @@
         sudo pip install rpi_ws281x
       #+END_SRC
 * Speaker
-** setup
+** Setup
 *** Physical Hardware
     - connect RCA jack on raspberrypi to TDA7492P amplifier
     - wire the speaker to the amplifier and bam.
