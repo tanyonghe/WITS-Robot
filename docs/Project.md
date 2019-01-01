@@ -1,4 +1,4 @@
-# WITS Robot - Project Description  
+# WITS Robot Project Description  
 
 ### The WITS Robot is an interactive robot companion that empowers children to go on superhero adventures.  
 
@@ -21,6 +21,12 @@ We aim to deliver the best interactive companion that empowers children sufferin
 4. Dataloop Feedback
 
 ## Our Product
+
+### Workshop Prototype
+We spent an hour building this for a quick presentation during Day 3 of the Makerthon 2019 Workshop.  
+![Workshop Prototype](images/workshop_prototype.png)
+
+### Actual Product
 Head down to Makerthon 2019 on the 7th of January to see our product live!
 
 ## Future Developments
