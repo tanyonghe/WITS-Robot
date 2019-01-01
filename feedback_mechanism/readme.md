@@ -1,21 +1,21 @@
 
 # Table of Contents
 
-1.  [Feedback Mechanism Module](#org69014da)
-2.  [LED](#org077f3f8)
-    1.  [Setup](#org563dae6)
-        1.  [Physical Hardware](#org6f54b7f)
-        2.  [Software Installation](#orgd68d534)
-        3.  [how to use?](#orge0e8af4)
-3.  [Speaker](#org18e141c)
-    1.  [Setup](#org0ee6211)
-        1.  [Physical Hardware](#org0139f31)
-        2.  [Software Installation](#org2be10aa)
-        3.  [Bluetooth Pairing](#org2a9858a)
+1.  [Feedback Mechanism Module](#org1801c3e)
+2.  [LED](#org4bd6630)
+    1.  [Setup](#orgd922298)
+        1.  [Physical Hardware](#org640b7cb)
+        2.  [Software Installation](#org7647f83)
+        3.  [how to use?](#orgffee343)
+3.  [Speaker](#orgc7b7d7a)
+    1.  [Setup](#org66c1a86)
+        1.  [Physical Hardware](#org9c1d8f5)
+        2.  [Software Installation](#orgc081707)
+        3.  [Bluetooth Pairing](#org654a3a5)
 
 
 
-<a id="org69014da"></a>
+<a id="org1801c3e"></a>
 
 # Feedback Mechanism Module
 
@@ -25,17 +25,17 @@ feedback mechanism consist of:
 -   led
 
 
-<a id="org077f3f8"></a>
+<a id="org4bd6630"></a>
 
 # LED
 
 
-<a id="org563dae6"></a>
+<a id="orgd922298"></a>
 
 ## Setup
 
 
-<a id="org6f54b7f"></a>
+<a id="org640b7cb"></a>
 
 ### Physical Hardware
 
@@ -75,7 +75,7 @@ feedback mechanism consist of:
 </table>
 
 
-<a id="orgd68d534"></a>
+<a id="org7647f83"></a>
 
 ### Software Installation
 
@@ -87,7 +87,7 @@ feedback mechanism consist of:
         sudo pip install rpi_ws281x
 
 
-<a id="orge0e8af4"></a>
+<a id="orgffee343"></a>
 
 ### how to use?
 
@@ -113,12 +113,12 @@ feedback mechanism consist of:
     # def getBrightness(self):
 
 
-<a id="org18e141c"></a>
+<a id="orgc7b7d7a"></a>
 
 # Speaker
 
 
-<a id="org0ee6211"></a>
+<a id="org66c1a86"></a>
 
 ## Setup
 
@@ -131,7 +131,7 @@ use bluetooth to pair it to the amplifier
 -   might need to blacklist the BMC-2835
 
 
-<a id="org0139f31"></a>
+<a id="org9c1d8f5"></a>
 
 ### Physical Hardware
 
@@ -139,7 +139,7 @@ use bluetooth to pair it to the amplifier
 -   wire the speaker to the amplifier and bam.
 
 
-<a id="org2be10aa"></a>
+<a id="orgc081707"></a>
 
 ### Software Installation
 
@@ -156,7 +156,7 @@ WS2812 to work, not sure
     -   Then "OK".
 
 
-<a id="org2a9858a"></a>
+<a id="org654a3a5"></a>
 
 ### Bluetooth Pairing
 
