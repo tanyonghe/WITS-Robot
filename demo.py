@@ -4,14 +4,14 @@ from time import sleep
 #from displayLED import *
 import mediaAPI as mAPI
 from scheduleAPI import *
-import webcam_gui as wgui
+import gui
 
 
 def initialize_demo_schedule():
 	demo_schedule = read_schedule('./data/demo_schedule')
     
 	add_to_schedule("09:05", "Stretching Exercises", demo_schedule, './data/demo_schedule')
-	add_to_schedule("09:35", "Play Fomosumo Game", demo_schedule, './data/demo_schedule')
+	add_to_schedule("09:35", "Play Shake It Game", demo_schedule, './data/demo_schedule')
 	add_to_schedule("16:45", "Strength Training", demo_schedule, './data/demo_schedule')
 	add_to_schedule("21:00", "Time to bathe!", demo_schedule, './data/demo_schedule') 
     
@@ -45,7 +45,7 @@ def main():
 				print_timing_activity(current_time, schedule[current_time])
 				#displayLED(0)
 				mAPI.play_audio('./sounds/activity.wav')
-				wgui.initialize_webcam_gui(schedule[current_time])
+				gui.initialize_gui(schedule[current_time])
 				print_next_activity(current_time, schedule)
                 
 		else:

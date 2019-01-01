@@ -4,7 +4,7 @@ from time import sleep
 #from displayLED import *
 import mediaAPI as mAPI
 from scheduleAPI import *
-from webcam_gui import *
+import gui
     
     
 def main():
@@ -27,7 +27,7 @@ def main():
 				print_timing_activity(current_time, schedule[current_time])
 				#displayLED(0)
 				mAPI.play_audio('./sounds/activity.wav')
-				initialize_webcam_gui(schedule[current_time])
+				gui.initialize_gui(schedule[current_time])
 				print_next_activity(current_time, schedule)				
                 
 		else:
