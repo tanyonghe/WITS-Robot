@@ -1,8 +1,8 @@
-# Interactive Robot Tracking System
+# WiFi Interactive Tracking Sidekick Robot  
 
-The best interactive robot companion for your children.  
+The WITS Robot is the best interactive companion that empowers all children to go on superhero adventures.  
 
-[Project Description](docs/PROJECT.md)  
+[Project Description](docs/Project.md)  
 
 [User Guide](docs/UserGuide.md)  
 
@@ -21,7 +21,7 @@ These instructions will get you a copy of the project up and running on your loc
 2. Enter the directory by typing in this command
 
 ```
-cd brownie
+cd WITS-Robot
 ```
 
 3. Install prerequisite libraries with setup.sh:
@@ -58,14 +58,14 @@ No public contributions expected as of now.
 
 ## Versioning
 
-For the versions available, see the [tags on this repository](https://github.com/x3tsunayh/brownie/tags). 
+For the versions available, see the [tags on this repository](https://github.com/x3tsunayh/WITS-Robot/tags). 
 
 ## Authors
 
 * **Tan Yong He** - [x3tsunayh](https://github.com/x3tsunayh)
 * **Wong Ding Feng** - [WongDingFeng](https://github.com/WongDingFeng)
 
-See also the list of [contributors](https://github.com/x3tsunayh/brownie/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/x3tsunayh/WITS-Robot/contributors) who participated in this project.
 
 ## License
 
