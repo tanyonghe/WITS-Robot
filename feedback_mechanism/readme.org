@@ -41,3 +41,5 @@
       - Select 7 Advanced Options, then Audio.
       - Select "Force 3.5mm ('headphone') jack".
       - Then "OK".
+*** Bluetooth Pairing
+    - could probably use gui but if that fails we can use this https://raspberrypi.stackexchange.com/questions/53408/automatically-connect-trusted-bluetooth-speaker/76288

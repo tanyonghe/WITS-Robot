@@ -1,19 +1,20 @@
 
 # Table of Contents
 
-1.  [Feedback Mechanism Module](#orgce8edf3)
-2.  [LED](#orgc659131)
-    1.  [Setup](#orga03c0e3)
-        1.  [Physical Hardware](#orgd934b9f)
-        2.  [Software Installation](#org57e2ad6)
-3.  [Speaker](#org646a30d)
-    1.  [Setup](#org4634244)
-        1.  [Physical Hardware](#orga183c1c)
-        2.  [Software Installation](#org36764e5)
+1.  [Feedback Mechanism Module](#org4807db9)
+2.  [LED](#org61ee650)
+    1.  [Setup](#org4b47418)
+        1.  [Physical Hardware](#org3d4c88f)
+        2.  [Software Installation](#org0bef282)
+3.  [Speaker](#org51c3572)
+    1.  [Setup](#orgea86e34)
+        1.  [Physical Hardware](#org30a3b4d)
+        2.  [Software Installation](#org79e3370)
+        3.  [Bluetooth Pairing](#orgbfe5967)
 
 
 
-<a id="orgce8edf3"></a>
+<a id="org4807db9"></a>
 
 # Feedback Mechanism Module
 
@@ -23,17 +24,17 @@ feedback mechanism consist of:
 -   led
 
 
-<a id="orgc659131"></a>
+<a id="org61ee650"></a>
 
 # LED
 
 
-<a id="orga03c0e3"></a>
+<a id="org4b47418"></a>
 
 ## Setup
 
 
-<a id="orgd934b9f"></a>
+<a id="org3d4c88f"></a>
 
 ### Physical Hardware
 
@@ -73,7 +74,7 @@ feedback mechanism consist of:
 </table>
 
 
-<a id="org57e2ad6"></a>
+<a id="org0bef282"></a>
 
 ### Software Installation
 
@@ -85,12 +86,12 @@ feedback mechanism consist of:
         sudo pip install rpi_ws281x
 
 
-<a id="org646a30d"></a>
+<a id="org51c3572"></a>
 
 # Speaker
 
 
-<a id="org4634244"></a>
+<a id="orgea86e34"></a>
 
 ## Setup
 
@@ -103,7 +104,7 @@ use bluetooth to pair it to the amplifier
 -   might need to blacklist the BMC-2835
 
 
-<a id="orga183c1c"></a>
+<a id="org30a3b4d"></a>
 
 ### Physical Hardware
 
@@ -111,7 +112,7 @@ use bluetooth to pair it to the amplifier
 -   wire the speaker to the amplifier and bam.
 
 
-<a id="org36764e5"></a>
+<a id="org79e3370"></a>
 
 ### Software Installation
 
@@ -126,4 +127,11 @@ WS2812 to work, not sure
     -   Select 7 Advanced Options, then Audio.
     -   Select "Force 3.5mm ('headphone') jack".
     -   Then "OK".
+
+
+<a id="orgbfe5967"></a>
+
+### Bluetooth Pairing
+
+-   could probably use gui but if that fails we can use this <https://raspberrypi.stackexchange.com/questions/53408/automatically-connect-trusted-bluetooth-speaker/76288>
 
