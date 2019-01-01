@@ -1,19 +1,19 @@
 
 # Table of Contents
 
-1.  [Feedback Mechanism Module](#orgc8caa95)
-2.  [LED](#org0ad4397)
-    1.  [Setup](#org3e3eb25)
-        1.  [Physical Hardware](#orgaaff337)
-        2.  [Software Installation](#orgcb62da2)
-3.  [Speaker](#orga4d5032)
-    1.  [Setup](#orgd90386e)
-        1.  [Physical Hardware](#org517ef9b)
-        2.  [Software Installation](#orgaff3c67)
+1.  [Feedback Mechanism Module](#orgce8edf3)
+2.  [LED](#orgc659131)
+    1.  [Setup](#orga03c0e3)
+        1.  [Physical Hardware](#orgd934b9f)
+        2.  [Software Installation](#org57e2ad6)
+3.  [Speaker](#org646a30d)
+    1.  [Setup](#org4634244)
+        1.  [Physical Hardware](#orga183c1c)
+        2.  [Software Installation](#org36764e5)
 
 
 
-<a id="orgc8caa95"></a>
+<a id="orgce8edf3"></a>
 
 # Feedback Mechanism Module
 
@@ -23,17 +23,17 @@ feedback mechanism consist of:
 -   led
 
 
-<a id="org0ad4397"></a>
+<a id="orgc659131"></a>
 
 # LED
 
 
-<a id="org3e3eb25"></a>
+<a id="orga03c0e3"></a>
 
 ## Setup
 
 
-<a id="orgaaff337"></a>
+<a id="orgd934b9f"></a>
 
 ### Physical Hardware
 
@@ -73,7 +73,7 @@ feedback mechanism consist of:
 </table>
 
 
-<a id="orgcb62da2"></a>
+<a id="org57e2ad6"></a>
 
 ### Software Installation
 
@@ -82,19 +82,15 @@ feedback mechanism consist of:
         sudo apt-get install build-essential python-dev python-pip unzip wget scons swig
 -   installation
     
-        wget https://github.com/jgarff/rpi_ws281x/archive/master.zip
-        unzip master.zip
-        cd rpi_ws281x-master
-        sudo scons
         sudo pip install rpi_ws281x
 
 
-<a id="orga4d5032"></a>
+<a id="org646a30d"></a>
 
 # Speaker
 
 
-<a id="orgd90386e"></a>
+<a id="org4634244"></a>
 
 ## Setup
 
@@ -107,7 +103,7 @@ use bluetooth to pair it to the amplifier
 -   might need to blacklist the BMC-2835
 
 
-<a id="org517ef9b"></a>
+<a id="orga183c1c"></a>
 
 ### Physical Hardware
 
@@ -115,7 +111,7 @@ use bluetooth to pair it to the amplifier
 -   wire the speaker to the amplifier and bam.
 
 
-<a id="orgaff3c67"></a>
+<a id="org36764e5"></a>
 
 ### Software Installation
 

@@ -18,10 +18,6 @@
       #+END_SRC
     - installation
       #+BEGIN_SRC sh
-        wget https://github.com/jgarff/rpi_ws281x/archive/master.zip
-        unzip master.zip
-        cd rpi_ws281x-master
-        sudo scons
         sudo pip install rpi_ws281x
       #+END_SRC
 * Speaker
