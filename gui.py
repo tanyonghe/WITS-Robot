@@ -48,7 +48,7 @@ def record_webcam():
 	cv2.destroyAllWindows()
 
     
-def initialize_webcam_gui(activity):
+def initialize_gui(activity):
 
 	
 	def destroy_window(window):
@@ -108,5 +108,5 @@ def initialize_webcam_gui(activity):
 
 	
 if __name__ == "__main__":
-	initialize_webcam_gui("<Insert Activity Here>")
+	initialize_gui("<Insert Activity Here>")
 
