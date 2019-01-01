@@ -3,6 +3,7 @@
 The best interactive robot companion for your children.  
 
 [Project Description](docs/PROJECT.md)  
+
 [User Guide](docs/UserGuide.md)  
 
 

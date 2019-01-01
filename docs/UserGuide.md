@@ -5,10 +5,7 @@ By: `Tan Yong He`      Since: `Dec 2018`      Licence: `N/A`
 
 ## Introduction
 
-TODO: Add introduction here.
-
-
-### Overview
+This software is meant to perform the following functionalities:
 
 * Program displays current time until it is time for an activity
 * Upon time for an activity, the GUI will appear
@@ -28,36 +25,32 @@ TODO: Add introduction here.
 ## Games
 
 
-****
 ### Shake It Game
 
 Shake it to 100 as fast as possible!
 
-![](docs/images/shakeit_screenshot.png)
+![Shake It Screenshot](docs/images/shakeit_screenshot.png)
 
 * Shake your device to start the game and raise the number.
 * The more you shake, the higher the number goes.
 * The aim is to reach 100 as fast as possible.
 * When the game is over, shake again to start a new round.
-****
 
 
-****
 ### Flappy Bird Game
 
 Flap your way through the game!
 
-![](docs/images/flappy_screenshot.png)
+![Flappy Screenshot](docs/images/flappy_screenshot.png)
 
 * Shake your device to start the game and control the flappy bird.
 * The more you shake, the higher the flappy bird goes.
 * Keep the flappy bird in the middle of the screen and avoid the pipes as they come along.
 * You gain 1 point for every pair of pipes successfully dodged.
 * When the game is over, shake again to start a new round.
-****
 
 
 ## FAQ
 
-*Q*: How do I add or delete activities in the schedule list? +
-*A*: Currently, there are APIs to help do this but the user has to manually call them by writing a script.
+*Q*: How do I add or delete activities in the schedule list?  
+*A*: Currently, there are APIs to help do this but the user has to manually call them by writing a script.  
