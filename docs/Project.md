@@ -1,6 +1,6 @@
-# WiFi Interactive Tracking Sidekick Robot 
+# WiFi Interactive Tracking Sidekick Robot - Project Description  
 
-### The WITS Robot is the best interactive companion that empowers all children to go on superhero adventures.  
+### The WITS Robot is the best interactive companion that empowers children to go on superhero adventures.  
 
 ## The Problem
 There is lack of motivation for children to exercise especially if children suffering from cerebral palsy experience discomfort, pain, or laziness.
