@@ -26,6 +26,12 @@
       #+END_SRC
 * Speaker
 ** Setup
+   We would go with the physical method first. However I have read
+   some blog post saying that its not possible to play music and
+   control the leds at the same time. This is due to the digital logic
+   output is based on the BCM-2835. If it cannot work then we have to
+   use bluetooth to pair it to the amplifier
+   - might need to blacklist the BMC-2835
 *** Physical Hardware
     - connect RCA jack on raspberrypi to TDA7492P amplifier
     - wire the speaker to the amplifier and bam.
