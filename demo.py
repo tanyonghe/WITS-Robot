@@ -11,7 +11,7 @@ def initialize_demo_schedule():
 	demo_schedule = read_schedule('./data/demo_schedule')
     
 	add_to_schedule("09:05", "Stretching Exercises", demo_schedule, './data/demo_schedule')
-	add_to_schedule("09:35", "Play Shake It Game", demo_schedule, './data/demo_schedule')
+	add_to_schedule("09:35", "Play Power Shake Game", demo_schedule, './data/demo_schedule')
 	add_to_schedule("16:45", "Strength Training", demo_schedule, './data/demo_schedule')
 	add_to_schedule("21:00", "Time to bathe!", demo_schedule, './data/demo_schedule') 
     
