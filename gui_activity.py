@@ -4,7 +4,7 @@ import flappy
 import mediaAPI as mAPI
 import numpy as np
 import os
-import shakeit
+import powershake
 import tkinter as tk
 import tkinter.messagebox
 
@@ -13,7 +13,7 @@ access_rights = 0o755
 
 try:  
     os.mkdir(path, access_rights)
-except OSError:  
+except OSError:
     pass
 
 
