@@ -68,7 +68,7 @@ def initialize_gui(activity):
 		games.geometry('500x300+0+0')
 		tk.Label(games, text = 'Games', fg = "white", bg = '#85929e', font=("Helvetica", 14, "bold")).pack()
 		tk.Label(games, text = '', fg = "white", bg = '#85929e').pack()
-		tk.Button(games, text = 'Play Shake It!', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = shakeit.main).pack()
+		tk.Button(games, text = 'Play Power Shake!', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = shakeit.main).pack()
 		tk.Label(games, text = '', fg = "white", bg = '#85929e').pack()
 		tk.Button(games, text = 'Play Flappy Bird!', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = flappy.main).pack()
 		tk.Label(games, text = '', fg = "white", bg = '#85929e').pack()
@@ -85,7 +85,7 @@ def initialize_gui(activity):
 
 
 	root = tk.Tk()
-	root.title('Webcam GUI')
+	root.title('WITS Robot')
 	root.geometry('500x300+0+0')
 	#root.iconbitmap('./docs/images/dog.ico')
 

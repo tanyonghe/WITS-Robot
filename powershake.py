@@ -86,7 +86,7 @@ def main():
 	pygame.init()
 	FPSCLOCK = pygame.time.Clock()
 	SCREEN = pygame.display.set_mode((SCREENWIDTH, SCREENHEIGHT))
-	pygame.display.set_caption('Shake It')
+	pygame.display.set_caption('Power Shake')
 
     # numbers sprites for score display
 	IMAGES['numbers'] = (
@@ -108,7 +108,8 @@ def main():
 	IMAGES['timetaken'] = pygame.image.load('assets/sprites/timetaken.png').convert_alpha()
 	IMAGES['seconds'] = pygame.image.load('assets/sprites/seconds.png').convert_alpha()
 	# message sprite for welcome screen
-	IMAGES['shakeit'] = pygame.image.load('assets/sprites/shakeit.png').convert_alpha()
+	IMAGES['power'] = pygame.image.load('assets/sprites/power.png').convert_alpha()
+	IMAGES['shake'] = pygame.image.load('assets/sprites/shake.png').convert_alpha()
 	IMAGES['team14'] = pygame.image.load('assets/sprites/team14.png').convert_alpha()
 	IMAGES['countdown'] = pygame.image.load('assets/sprites/countdown.png').convert_alpha()
 	# base (ground) sprite
@@ -129,8 +130,10 @@ def showWelcomeAnimation():
 
 	tapped = False
 	
-	shakeitx = int((SCREENWIDTH - IMAGES['shakeit'].get_width()) / 2)
-	shakeity = int(SCREENHEIGHT * 0.12)
+	powerx = int((SCREENWIDTH - IMAGES['power'].get_width()) / 2)
+	powery = int(SCREENHEIGHT * 0.10)
+	shakex = int((SCREENWIDTH - IMAGES['shake'].get_width()) / 2)
+	shakey = int(SCREENHEIGHT * 0.20)
 	team14x = int((SCREENWIDTH - IMAGES['team14'].get_width()) / 2)
 	team14y = int(SCREENHEIGHT * 0.45)
 	countdownx = int((SCREENWIDTH - IMAGES['countdown'].get_width()) / 2)
@@ -145,27 +148,31 @@ def showWelcomeAnimation():
 				tapped = True
 	
 		SCREEN.blit(IMAGES['background'], (0,0))
-		SCREEN.blit(IMAGES['shakeit'], (shakeitx, shakeity))
+		SCREEN.blit(IMAGES['power'], (powerx, powery))
+		SCREEN.blit(IMAGES['shake'], (shakex, shakey))
 		SCREEN.blit(IMAGES['team14'], (team14x, team14y))
 		A_XYZ = retrieve_UDP_values()
 		
 		if A_XYZ > 2 or tapped:
 			SCREEN.blit(IMAGES['background'], (0,0))
-			SCREEN.blit(IMAGES['shakeit'], (shakeitx, shakeity))
+			SCREEN.blit(IMAGES['power'], (powerx, powery))
+			SCREEN.blit(IMAGES['shake'], (shakex, shakey))
 			SCREEN.blit(IMAGES['countdown'], (countdownx, countdowny))
 			showScore(3, 0.45)
 			pygame.display.update()
 			FPSCLOCK.tick(FPS)
 			time.sleep(1)
 			SCREEN.blit(IMAGES['background'], (0,0))
-			SCREEN.blit(IMAGES['shakeit'], (shakeitx, shakeity))
+			SCREEN.blit(IMAGES['power'], (powerx, powery))
+			SCREEN.blit(IMAGES['shake'], (shakex, shakey))
 			SCREEN.blit(IMAGES['countdown'], (countdownx, countdowny))
 			showScore(2, 0.45)
 			pygame.display.update()
 			FPSCLOCK.tick(FPS)
 			time.sleep(1)
 			SCREEN.blit(IMAGES['background'], (0,0))
-			SCREEN.blit(IMAGES['shakeit'], (shakeitx, shakeity))
+			SCREEN.blit(IMAGES['power'], (powerx, powery))
+			SCREEN.blit(IMAGES['shake'], (shakex, shakey))
 			SCREEN.blit(IMAGES['countdown'], (countdownx, countdowny))
 			showScore(1, 0.45)
 			pygame.display.update()
