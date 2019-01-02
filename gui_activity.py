@@ -65,7 +65,7 @@ def initialize_gui(activity):
 	def play_games():
 		games = tk.Tk()
 		games.title('Games')
-		games.geometry('500x300+0+0')
+		games.geometry('815x400+0+0')
 		tk.Label(games, text = 'Games', fg = "white", bg = '#85929e', font=("Helvetica", 14, "bold")).pack()
 		tk.Label(games, text = '', fg = "white", bg = '#85929e').pack()
 		tk.Button(games, text = 'Play Power Shake!', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = powershake.main).pack()
@@ -86,7 +86,7 @@ def initialize_gui(activity):
 
 	root = tk.Tk()
 	root.title('WITS Robot')
-	root.geometry('500x300+0+0')
+	root.geometry('815x400+0+0')
 	#root.iconbitmap('./docs/images/dog.ico')
 
 	tk.Label(root, text = 'Current Activity', fg = "white", bg = '#85929e', font=("Helvetica", 14, "bold")).pack()

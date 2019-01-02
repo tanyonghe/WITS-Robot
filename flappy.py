@@ -74,7 +74,7 @@ def euclidean(x, y, z):
 	
 def retrieve_UDP_values():
     UDP_IP = socket.gethostbyname(socket.gethostname())
-	#UDP_IP = "192.168.1.21"
+    #UDP_IP = "192.168.43.136"
     UDP_PORT = 5001
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.settimeout(.02)
