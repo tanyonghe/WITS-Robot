@@ -68,7 +68,7 @@ def initialize_gui(activity):
 		games.geometry('500x300+0+0')
 		tk.Label(games, text = 'Games', fg = "white", bg = '#85929e', font=("Helvetica", 14, "bold")).pack()
 		tk.Label(games, text = '', fg = "white", bg = '#85929e').pack()
-		tk.Button(games, text = 'Play Power Shake!', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = shakeit.main).pack()
+		tk.Button(games, text = 'Play Power Shake!', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = powershake.main).pack()
 		tk.Label(games, text = '', fg = "white", bg = '#85929e').pack()
 		tk.Button(games, text = 'Play Flappy Bird!', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = flappy.main).pack()
 		tk.Label(games, text = '', fg = "white", bg = '#85929e').pack()
