@@ -228,8 +228,8 @@ def showWelcomeAnimation():
         SCREEN.blit(IMAGES['background'], (0,0))
         SCREEN.blit(IMAGES['player'][playerIndex],
                     (playerx, playery + playerShmVals['val']))
-        SCREEN.blit(IMAGES['message'], (messagex, messagey))
         SCREEN.blit(IMAGES['base'], (basex, BASEY))
+        SCREEN.blit(IMAGES['message'], (messagex, messagey))
 
         pygame.display.update()
         FPSCLOCK.tick(FPS)
