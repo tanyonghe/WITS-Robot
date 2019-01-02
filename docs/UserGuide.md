@@ -1,26 +1,11 @@
-= Brownie - User Guide
-:toc:
-:toc-title:
-:toc-placement: preamble
-:sectnums:
-:imagesDir: images
-:stylesDir: stylesheets
-:xrefstyle: full
-:experimental:
-ifdef::env-github[]
-:tip-caption: :bulb:
-:note-caption: :information_source:
-endif::[]
-:repoURL: https://github.com/x3tsunayh/brownie
+# WITS Robot User Guide  
 
 By: `Tan Yong He`      Since: `Dec 2018`      Licence: `N/A`
 
-== Introduction
 
-TODO: Add introduction here.
+## Introduction
 
-====
-*Overview*
+This software aims to perform the following functionalities:
 
 * Program displays current time until it is time for an activity
 * Upon time for an activity, the GUI will appear
@@ -29,57 +14,43 @@ TODO: Add introduction here.
 * The user can also play games using the `Play Games!` button
 * The games require a device that can send device motions via UDP to the program (e.g. a smartphone using SensorUDP)
 
-====
 
-== Quick Start
+## Quick Start
 
-.  Ensure you have Python version `3.5.3` or later installed in your Computer.
+* Ensure you have Python version `3.5.3` or later installed in your Computer.
 
-.  Refer to <<Games>> for details of the available games.
+* Refer to <<Games>> for details of the available games.
 
-[[Games]]
-== Games
 
-//tag::shakeitgame[]
+## Games
 
-=== Shake It Game
+
+### Shake It Game
 
 Shake it to 100 as fast as possible!
 
-+
-image::shakeit_screenshot.png[width="790"]
-+
+![Shake It Screenshot](images/shakeit_screenshot.png)
 
-****
 * Shake your device to start the game and raise the number.
 * The more you shake, the higher the number goes.
 * The aim is to reach 100 as fast as possible.
 * When the game is over, shake again to start a new round.
-****
 
-//end::shakeitgame[]
 
-//tag::flappybirdgame[]
-
-=== Flappy Bird Game
+### Flappy Bird Game
 
 Flap your way through the game!
 
-+
-image::flappy_screenshot.png[width="790"]
-+
+![Flappy Screenshot](images/flappy_screenshot.png)
 
-****
 * Shake your device to start the game and control the flappy bird.
 * The more you shake, the higher the flappy bird goes.
 * Keep the flappy bird in the middle of the screen and avoid the pipes as they come along.
 * You gain 1 point for every pair of pipes successfully dodged.
 * When the game is over, shake again to start a new round.
-****
 
-//end::flappybirdgame[]
 
-== FAQ
+## FAQ
 
-*Q*: How do I add or delete activities in the schedule list? +
-*A*: Currently, there are APIs to help do this but the user has to manually call them by writing a script.
+*Q*: How do I add or delete activities in the schedule list?  
+*A*: Currently, there are APIs to help do this but the user has to manually call them by writing a script.  
