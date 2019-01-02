@@ -23,7 +23,7 @@ We aim to deliver the best interactive companion that empowers children sufferin
 ## Our Product
 
 ### Workshop Prototype
-We spent an hour building this for a quick presentation during Day 3 of the Makerthon 2019 Workshop.  
+We spent an hour building Brownie - our prototype puppy - for a quick presentation during Day 3 of the Makerthon 2019 Workshop.  
 ![Workshop Prototype](images/workshop_prototype.png)
 
 ### Actual Product

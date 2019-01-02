@@ -9,6 +9,7 @@ This software aims to perform the following functionalities:
 
 * Program displays current time until it is time for an activity
 * Upon time for an activity, the GUI will appear
+![WITS Robot GUI](images/wits_robot_gui.png)
 * Depending on the given activity, the user can record activities using the webcam by pressing on `Start Activity`
 * When the user finishes the activity, the user can stop the recording and return to the program using `End Activity`
 * The user can also play games using the `Play Games!` button
@@ -19,17 +20,16 @@ This software aims to perform the following functionalities:
 
 * Ensure you have Python version `3.5.3` or later installed in your Computer.
 
-* Refer to <<Games>> for details of the available games.
-
 
 ## Games
 
 
-### Shake It Game
+### Power Shake  
 
-Shake it to 100 as fast as possible!
+A superhero needs to be swift in dealing with villians and has to be able to gather power in the shortest time possible.  
+Store 100% power in the quickest time possible through kinetic motion!
 
-![Shake It Screenshot](images/shakeit_screenshot.png)
+![Power Shake Screenshot](images/powershake_screenshot.png)
 
 * Shake your device to start the game and raise the number.
 * The more you shake, the higher the number goes.
@@ -37,9 +37,10 @@ Shake it to 100 as fast as possible!
 * When the game is over, shake again to start a new round.
 
 
-### Flappy Bird Game
+### Flappy Bird  
 
-Flap your way through the game!
+A superhero needs to have great dexterity and control, especially when carrying out tasks.  
+Navigate your flappy bird familiar through the map and avoid obstacles for as long as you can!  
 
 ![Flappy Screenshot](images/flappy_screenshot.png)
 

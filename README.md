@@ -32,7 +32,7 @@ cd WITS-Robot
 
 ## Usage
 
-1. To run the main program, double click/tap on the main.sh script or enter the command:
+To run the main program, double click/tap on the main.sh script or enter the command:
 ```
 ./main.sh
 ```
