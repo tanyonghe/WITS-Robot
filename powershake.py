@@ -6,6 +6,8 @@ from struct import *
 import sys
 import time
 
+import serial
+
 import contextlib
 with contextlib.redirect_stdout(None):
     import pygame
@@ -18,6 +20,8 @@ class DevNull:
 
 sys.stderr = DevNull()  # to squash errors for the time being
 
+arduinoSerialData = serial.Serial('/dev/ttyACM0', 9600)
+time.sleep(3)
 
 FPS = 30
 SCREENWIDTH  = 288
@@ -188,9 +192,10 @@ def mainGame():
 	tapped = False
 	shake = 1
 	
+	raw_score = 0
 	score = 0
 	start_time = time.time()
-	
+
 	while True:
 		for event in pygame.event.get():
 			if event.type == QUIT or (event.type == KEYDOWN and event.key == K_ESCAPE):
@@ -206,11 +211,18 @@ def mainGame():
 		
 		if A_XYZ > 2 or tapped:
 			shake = -shake
-			score += 1
+			raw_score += 1
+
+			if raw_score == 2:
+				raw_score = 0
+				score  += 1
+				if score % 10 == 0:
+					arduinoSerialData.write(b'5')
+			showScore(score)
+
 			if score == 100:
 				return time.time() - start_time
 				
-		showScore(score)
 		shaker = pygame.transform.rotate(IMAGES['phoneshake'], shake * 15)
 		SCREEN.blit(shaker, (30,100))
 

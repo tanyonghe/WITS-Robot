@@ -82,7 +82,7 @@ def initialize_gui(activity):
 	
 	def play_audio(file_path):
 		def play():
-			mAPI.play_audio(file_path)
+			#mAPI.play_audio(file_path)
 			root.after(300000, play_audio('./sounds/angry.wav'))
 		return play
 
