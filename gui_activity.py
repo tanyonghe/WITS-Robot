@@ -1,12 +1,15 @@
-import cv2
 import datetime as dt
-import flappy
-import mediaAPI as mAPI
-import numpy as np
 import os
-import powershake
 import tkinter as tk
 import tkinter.messagebox
+
+import cv2
+import numpy as np
+
+import flappy
+import mediaAPI as mAPI
+import powershake
+
 
 path = './videos'
 access_rights = 0o755

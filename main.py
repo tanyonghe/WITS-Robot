@@ -2,9 +2,9 @@ import datetime as dt
 from time import sleep
 
 #from displayLED import *
+import gui_activity as agui
 import mediaAPI as mAPI
 from scheduleAPI import *
-import gui_activity as agui
     
     
 def main():
