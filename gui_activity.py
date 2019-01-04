@@ -51,7 +51,18 @@ def record_webcam():
 	cv2.destroyAllWindows()
 
     
-def initialize_gui(activity):
+def initialize_gui(arduinoSerialData, activity):
+
+
+	def start_game(game):
+		def start():
+			if game == "powershake":
+				powershake.main(arduinoSerialData)
+			elif game == "flappy":
+				flappy.main(arduinoSerialData)
+			else:
+				pass
+		return start
 
 	
 	def destroy_window(window):
@@ -71,9 +82,9 @@ def initialize_gui(activity):
 		games.geometry('800x400+0+0')
 		tk.Label(games, text = 'Games', fg = "white", bg = '#85929e', font=("Helvetica", 14, "bold")).pack()
 		tk.Label(games, text = '', fg = "white", bg = '#85929e').pack()
-		tk.Button(games, text = 'Play Power Shake!', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = powershake.main).pack()
+		tk.Button(games, text = 'Play Power Shake!', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = start_game("powershake")).pack()
 		tk.Label(games, text = '', fg = "white", bg = '#85929e').pack()
-		tk.Button(games, text = 'Play Flappy Bird!', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = flappy.main).pack()
+		tk.Button(games, text = 'Play Flappy Bird!', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = start_game("flappy")).pack()
 		tk.Label(games, text = '', fg = "white", bg = '#85929e').pack()
 		tk.Button(games, text = 'Exit Games', fg = "white", bg = '#85929e', font=("Helvetica", 12), command = destroy_window(games)).pack()
 		games.config(bg = '#85929e')
@@ -82,7 +93,7 @@ def initialize_gui(activity):
 	
 	def play_audio(file_path):
 		def play():
-			#mAPI.play_audio(file_path)
+			mAPI.play_audio(file_path)
 			root.after(300000, play_audio('./sounds/angry.wav'))
 		return play
 
@@ -106,10 +117,11 @@ def initialize_gui(activity):
 
 	root.config(bg = '#85929e')
 	
-	root.after(300000, play_audio('./sounds/angry.wav'))  # plays audio every 5 min or 300000 ms
+	#root.after(300000, play_audio('./sounds/angry.wav'))  # plays audio every 5 min or 300000 ms
 	root.mainloop()
 
 	
 if __name__ == "__main__":
-	initialize_gui("<Insert Activity Here>")
+	arduinoSerialData = "<Attach Arduino>"
+	initialize_gui(arduinoSerialData, "<Insert Activity Here>")
 

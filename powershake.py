@@ -4,7 +4,7 @@ import random
 import socket
 from struct import *
 import sys
-import time
+from time import sleep
 
 import serial
 
@@ -19,9 +19,6 @@ class DevNull:
         pass
 
 sys.stderr = DevNull()  # to squash errors for the time being
-
-arduinoSerialData = serial.Serial('/dev/ttyACM0', 9600)
-time.sleep(3)
 
 FPS = 30
 SCREENWIDTH  = 288
@@ -85,7 +82,7 @@ def showScore(score, ratio = 0.1):
 		Xoffset += IMAGES['numbers'][digit].get_width()
 
 		
-def main():
+def main(arduinoSerialData):
 	global SCREEN, FPSCLOCK
 	pygame.init()
 	FPSCLOCK = pygame.time.Clock()
@@ -125,12 +122,12 @@ def main():
 		# select random background sprites
 		randBg = random.randint(0, len(BACKGROUNDS_LIST) - 1)
 		IMAGES['background'] = pygame.image.load(BACKGROUNDS_LIST[randBg]).convert()
-		showWelcomeAnimation()
-		elapsed_time = mainGame()
+		showWelcomeAnimation(arduinoSerialData)
+		elapsed_time = mainGame(arduinoSerialData)
 		showGameOverScreen(elapsed_time)
 
 
-def showWelcomeAnimation():
+def showWelcomeAnimation(arduinoSerialData):
 
 	tapped = False
 	
@@ -165,7 +162,7 @@ def showWelcomeAnimation():
 			showScore(3, 0.45)
 			pygame.display.update()
 			FPSCLOCK.tick(FPS)
-			time.sleep(1)
+			sleep(1)
 			SCREEN.blit(IMAGES['background'], (0,0))
 			SCREEN.blit(IMAGES['power'], (powerx, powery))
 			SCREEN.blit(IMAGES['shake'], (shakex, shakey))
@@ -173,7 +170,7 @@ def showWelcomeAnimation():
 			showScore(2, 0.45)
 			pygame.display.update()
 			FPSCLOCK.tick(FPS)
-			time.sleep(1)
+			sleep(1)
 			SCREEN.blit(IMAGES['background'], (0,0))
 			SCREEN.blit(IMAGES['power'], (powerx, powery))
 			SCREEN.blit(IMAGES['shake'], (shakex, shakey))
@@ -181,13 +178,13 @@ def showWelcomeAnimation():
 			showScore(1, 0.45)
 			pygame.display.update()
 			FPSCLOCK.tick(FPS)
-			time.sleep(1)
+			sleep(1)
 			return
 		
 		pygame.display.update()
 		FPSCLOCK.tick(FPS)
 
-def mainGame():
+def mainGame(arduinoSerialData):
 	
 	tapped = False
 	shake = 1
@@ -217,7 +214,7 @@ def mainGame():
 				raw_score = 0
 				score  += 1
 				if score % 10 == 0:
-					arduinoSerialData.write(b'5')
+					arduinoSerialData.write(b'Shake Head')
 			showScore(score)
 
 			if score == 100:
@@ -266,4 +263,5 @@ def showGameOverScreen(elapsed_time):
 	
 	
 if __name__ == '__main__':
-    main()
+	arduinoSerialData = "<Attach Arduino>"
+    main(arduinoSerialData)

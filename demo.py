@@ -8,6 +8,10 @@ import mediaAPI as mAPI
 from scheduleAPI import *
 
 
+arduinoSerialData = serial.Serial('/dev/ttyACM0', 9600)
+sleep(2)
+
+
 def initialize_demo_schedule():
 	demo_schedule = read_schedule('./data/demo_schedule')
     
@@ -45,7 +49,7 @@ def main():
 				activity_alert = 0
 				print_timing_activity(current_time, schedule[current_time])
 				#mAPI.play_audio('./sounds/activity.wav')
-				agui.initialize_gui(schedule[current_time])
+				agui.initialize_gui(arduinoSerialData, schedule[current_time])
 				print_next_activity(current_time, schedule)
                 
 		else:

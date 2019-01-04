@@ -19,9 +19,6 @@ class DevNull:
 
 sys.stderr = DevNull()  # to squash errors for the time being
 
-arduinoSerialData = serial.Serial('/dev/ttyACM0', 9600)
-time.sleep(2)
-
 FPS = 30
 SCREENWIDTH  = 288
 SCREENHEIGHT = 400
@@ -94,7 +91,7 @@ def retrieve_UDP_values():
         return 0
 	
 
-def main():
+def main(arduinoSerialData):
     global SCREEN, FPSCLOCK
     pygame.init()
     FPSCLOCK = pygame.time.Clock()
@@ -168,12 +165,12 @@ def main():
             getHitmask(IMAGES['player'][2]),
         )
 
-        movementInfo = showWelcomeAnimation()
-        crashInfo = mainGame(movementInfo)
+        movementInfo = showWelcomeAnimation(arduinoSerialData)
+        crashInfo = mainGame(arduinoSerialData, movementInfo)
         showGameOverScreen(crashInfo)
 
 
-def showWelcomeAnimation():
+def showWelcomeAnimation(arduinoSerialData):
     """Shows welcome screen animation of flappy bird"""
     # index of player to blit on screen
     playerIndex = 0
@@ -240,7 +237,7 @@ def showWelcomeAnimation():
         FPSCLOCK.tick(FPS)
 
 
-def mainGame(movementInfo):
+def mainGame(arduinoSerialData, movementInfo):
     score = playerIndex = loopIter = 0
     playerIndexGen = movementInfo['playerIndexGen']
     playerx, playery = int(SCREENWIDTH * 0.2), movementInfo['playery']
@@ -322,7 +319,7 @@ def mainGame(movementInfo):
             if pipeMidPos <= playerMidPos < pipeMidPos + 4:
                 score += 1
                 SOUNDS['point'].play()
-                arduinoSerialData.write(b'5')
+                arduinoSerialData.write(b'Shake Head')
 
         # playerIndex basex change
         if (loopIter + 1) % 3 == 0:
@@ -554,4 +551,5 @@ def getHitmask(image):
     return mask
 
 if __name__ == '__main__':
-    main()
+	arduinoSerialData = "<Attach Arduino>"
+    main(arduinoSerialData)
