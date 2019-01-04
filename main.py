@@ -1,7 +1,8 @@
 import datetime as dt
 from time import sleep
 
-#from displayLED import *
+import serial
+
 import gui_activity as agui
 import mediaAPI as mAPI
 from scheduleAPI import *
@@ -25,8 +26,7 @@ def main():
 			if activity_alert:
 				activity_alert = 0
 				print_timing_activity(current_time, schedule[current_time])
-				#displayLED(0)
-				mAPI.play_audio('./sounds/activity.wav')
+				#mAPI.play_audio('./sounds/activity.wav')
 				agui.initialize_gui(schedule[current_time])
 				print_next_activity(current_time, schedule)				
                 
@@ -40,11 +40,9 @@ def main():
 			if current_time[3:5] == '00':  # if it is a full hour timing
 				if hourly_alert:
 					hourly_alert = 0
-					#displayLED(3)
-					mAPI.play_audio('./sounds/hourly.wav')
+					#mAPI.play_audio('./sounds/hourly.wav')
 			else:
 				hourly_alert = 1
-				#displayLED(2)
 				
 			sleep(1)
 			clear_screen_text("Current Time: " + current_time)

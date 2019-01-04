@@ -3,7 +3,6 @@ from time import sleep
 
 import serial
 
-#from displayLED import *
 import gui_activity as agui
 import mediaAPI as mAPI
 from scheduleAPI import *

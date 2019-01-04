@@ -31,8 +31,8 @@ We spent an hour building Brownie - our prototype puppy - for a quick presentati
 ![Workshop Prototype](images/workshop_prototype.png)
 
 ### Actual Product
+Head down to Makerthon 2019 on the 7th of January to see our product live!  
 ![WITS Robot](images/wits_robot.png)
-Head down to Makerthon 2019 on the 7th of January to see our product live!
 
 ## Future Developments
 1. Incorporate more games with tracking functionalities
