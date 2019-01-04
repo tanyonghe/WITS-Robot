@@ -3,6 +3,9 @@ import random
 import socket
 from struct import *
 import sys
+import time
+
+import serial
 
 import contextlib
 with contextlib.redirect_stdout(None):
@@ -16,6 +19,8 @@ class DevNull:
 
 sys.stderr = DevNull()  # to squash errors for the time being
 
+arduinoSerialData = serial.Serial('/dev/ttyACM0', 9600)
+time.sleep(2)
 
 FPS = 30
 SCREENWIDTH  = 288
@@ -317,6 +322,7 @@ def mainGame(movementInfo):
             if pipeMidPos <= playerMidPos < pipeMidPos + 4:
                 score += 1
                 SOUNDS['point'].play()
+                arduinoSerialData.write(b'5')
 
         # playerIndex basex change
         if (loopIter + 1) % 3 == 0:
