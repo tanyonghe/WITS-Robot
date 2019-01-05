@@ -4,9 +4,9 @@ import random
 import socket
 from struct import *
 import sys
-from time import sleep
+from time import sleep, time
 
-import serial
+#import serial
 
 import contextlib
 with contextlib.redirect_stdout(None):
@@ -19,6 +19,7 @@ class DevNull:
         pass
 
 sys.stderr = DevNull()  # to squash errors for the time being
+
 
 FPS = 30
 SCREENWIDTH  = 288
@@ -191,7 +192,7 @@ def mainGame(arduinoSerialData):
 	
 	raw_score = 0
 	score = 0
-	start_time = time.time()
+	start_time = time()
 
 	while True:
 		for event in pygame.event.get():
@@ -214,11 +215,11 @@ def mainGame(arduinoSerialData):
 				raw_score = 0
 				score  += 1
 				if score % 10 == 0:
-					arduinoSerialData.write(b'Shake Head')
+					arduinoSerialData.write(b'1')
 			showScore(score)
 
 			if score == 100:
-				return time.time() - start_time
+				return time() - start_time
 				
 		shaker = pygame.transform.rotate(IMAGES['phoneshake'], shake * 15)
 		SCREEN.blit(shaker, (30,100))
@@ -264,4 +265,4 @@ def showGameOverScreen(elapsed_time):
 	
 if __name__ == '__main__':
 	arduinoSerialData = "<Attach Arduino>"
-    main(arduinoSerialData)
+	main(arduinoSerialData)

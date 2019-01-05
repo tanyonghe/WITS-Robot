@@ -3,9 +3,8 @@ import random
 import socket
 from struct import *
 import sys
-import time
 
-import serial
+#import serial
 
 import contextlib
 with contextlib.redirect_stdout(None):
@@ -18,6 +17,7 @@ class DevNull:
         pass
 
 sys.stderr = DevNull()  # to squash errors for the time being
+
 
 FPS = 30
 SCREENWIDTH  = 288
@@ -319,7 +319,7 @@ def mainGame(arduinoSerialData, movementInfo):
             if pipeMidPos <= playerMidPos < pipeMidPos + 4:
                 score += 1
                 SOUNDS['point'].play()
-                arduinoSerialData.write(b'Shake Head')
+                arduinoSerialData.write(b'1')
 
         # playerIndex basex change
         if (loopIter + 1) % 3 == 0:
@@ -551,5 +551,5 @@ def getHitmask(image):
     return mask
 
 if __name__ == '__main__':
-	arduinoSerialData = "<Attach Arduino>"
+    arduinoSerialData = "<Attach Arduino>"
     main(arduinoSerialData)
