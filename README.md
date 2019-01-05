@@ -9,11 +9,17 @@ The WITS Robot is an interactive robot companion that empowers children to go on
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.   
+The software was designed to be ran on a Raspberry Pi 3 Model B hardware and displayed on a 7" LCD Touchscreen.  
+There is also additional communications to an Arduino hardware for sensors and motions on a robot dog model customized for our project.  
+Feel free to add in or remove additional code as you deem fit for your own usage.  
 
 ### Prerequisites
 
 * [Python 3.5.3 or above](https://www.python.org/)
+* [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
+* [Rspberry Pi LCD - 7" Touchscreen](https://www.sparkfun.com/products/13733/)
+* [Arduino Uno Rev3](https://store.arduino.cc/usa/arduino-uno-rev3/)
 
 ### Installing
 
