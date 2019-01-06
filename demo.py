@@ -50,7 +50,7 @@ def main():
 				activity_alert = 0
 				print_timing_activity(current_time, schedule[current_time])
 				arduinoSerialData.write(b'1')
-				mAPI.play_audio('./sounds/hourly.wav')
+				mAPI.play_audio('./sounds/main.wav')
 				agui.initialize_gui(arduinoSerialData, schedule[current_time])
 				print_next_activity(current_time, schedule)
                 
@@ -65,7 +65,7 @@ def main():
 				if hourly_alert:
 					hourly_alert = 0
 					arduinoSerialData.write(b'1')
-					mAPI.play_audio('./sounds/hourly.wav')
+					mAPI.play_audio('./sounds/main.wav')
 			else:
 				hourly_alert = 1
 				

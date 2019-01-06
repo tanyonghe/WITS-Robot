@@ -20,7 +20,7 @@ class DevNull:
     def write(self, msg):
         pass
 
-#sys.stderr = DevNull()  # to squash errors for the time being
+sys.stderr = DevNull()  # to squash errors for the time being
 
 
 FPS = 30
@@ -219,9 +219,13 @@ def mainGame(arduinoSerialData):
 				showScore(score)
 				if score % 10 == 0:
 					arduinoSerialData.write(b'1')
+			else:
+				showScore(score)
 
 			if score == 100:
 				return time() - start_time
+		else:
+			showScore(score)
 				
 		shaker = pygame.transform.rotate(IMAGES['phoneshake'], shake * 15)
 		SCREEN.blit(shaker, (30,100))
