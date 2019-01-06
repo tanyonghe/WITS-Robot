@@ -223,6 +223,8 @@ def mainGame(arduinoSerialData):
 				showScore(score)
 
 			if score == 100:
+				SCREEN.blit(IMAGES['background'], (0,0))
+				showScore(100)
 				return time() - start_time
 		else:
 			showScore(score)
