@@ -16,7 +16,7 @@ class DevNull:
     def write(self, msg):
         pass
 
-sys.stderr = DevNull()  # to squash errors for the time being
+#sys.stderr = DevNull()  # to squash errors for the time being
 
 
 FPS = 30

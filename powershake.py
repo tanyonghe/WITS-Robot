@@ -8,6 +8,8 @@ from time import sleep, time
 
 import serial
 
+import mediaAPI as mAPI
+
 import contextlib
 with contextlib.redirect_stdout(None):
     import pygame
@@ -18,7 +20,7 @@ class DevNull:
     def write(self, msg):
         pass
 
-sys.stderr = DevNull()  # to squash errors for the time being
+#sys.stderr = DevNull()  # to squash errors for the time being
 
 
 FPS = 30
@@ -214,9 +216,9 @@ def mainGame(arduinoSerialData):
 			if raw_score == 2:
 				raw_score = 0
 				score  += 1
+				showScore(score)
 				if score % 10 == 0:
 					arduinoSerialData.write(b'1')
-			showScore(score)
 
 			if score == 100:
 				return time() - start_time
@@ -231,7 +233,7 @@ def mainGame(arduinoSerialData):
 	
 
 def showGameOverScreen(elapsed_time):
-
+	mAPI.play_audio('./sounds/activity.wav')
 	tapped = False
 	truncated_time = str(math.ceil(elapsed_time * 1000.0) / 1000.0)
 	reset = 0
