@@ -6,7 +6,7 @@ from struct import *
 import sys
 from time import sleep, time
 
-#import serial
+import serial
 
 import contextlib
 with contextlib.redirect_stdout(None):

@@ -1,16 +1,16 @@
 import datetime as dt
 from time import sleep
 
-#import serial
+import serial
 
 import gui_activity as agui
 import mediaAPI as mAPI
 from scheduleAPI import *
 
 
-#arduinoSerialData = serial.Serial('/dev/ttyACM0', 9600)
-#sleep(2)
-arduinoSerialData = ""
+arduinoSerialData = serial.Serial('/dev/ttyACM0', 9600)
+sleep(2)
+#arduinoSerialData = ""
 
 
 def initialize_demo_schedule():
@@ -50,7 +50,7 @@ def main():
 				activity_alert = 0
 				print_timing_activity(current_time, schedule[current_time])
 				arduinoSerialData.write(b'1')
-				#mAPI.play_audio('./sounds/activity.wav')
+				mAPI.play_audio('./sounds/activity.wav')
 				agui.initialize_gui(arduinoSerialData, schedule[current_time])
 				print_next_activity(current_time, schedule)
                 
@@ -65,7 +65,7 @@ def main():
 				if hourly_alert:
 					hourly_alert = 0
 					arduinoSerialData.write(b'1')
-					#mAPI.play_audio('./sounds/hourly.wav')
+					mAPI.play_audio('./sounds/hourly.wav')
 			else:
 				hourly_alert = 1
 				

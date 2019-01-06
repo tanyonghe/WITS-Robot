@@ -4,7 +4,7 @@ import socket
 from struct import *
 import sys
 
-#import serial
+import serial
 
 import contextlib
 with contextlib.redirect_stdout(None):
