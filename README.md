@@ -68,7 +68,7 @@ For the versions available, see the [tags on this repository](https://github.com
 
 ## Authors
 
-* **Tan Yong He** - [x3tsunayh](https://github.com/x3tsunayh)
+* **Tan Yong He** - [tanyonghe](https://github.com/tanyonghe)
 * **Wong Ding Feng** - [WongDingFeng](https://github.com/WongDingFeng)
 
 See also the list of [contributors](https://github.com/x3tsunayh/WITS-Robot/contributors) who participated in this project.
