@@ -62,16 +62,10 @@ To run the demo program instead, double click/tap on the demo.sh script or enter
 
 No public contributions expected as of now.
 
-## Versioning
-
-For the versions available, see the [tags on this repository](https://github.com/x3tsunayh/WITS-Robot/tags). 
-
 ## Authors
 
 * **Tan Yong He** - [tanyonghe](https://github.com/tanyonghe)
 * **Wong Ding Feng** - [WongDingFeng](https://github.com/WongDingFeng)
-
-See also the list of [contributors](https://github.com/x3tsunayh/WITS-Robot/contributors) who participated in this project.
 
 ## License
 
