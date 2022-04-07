@@ -28,11 +28,11 @@ We aim to deliver the best interactive companion that empowers children sufferin
 
 ### Workshop Prototype
 We spent an hour building Brownie - our prototype puppy - for a quick presentation during Day 3 of the Makerthon 2019 Workshop.  
-![Workshop Prototype](images/workshop_prototype.png)
+![Workshop Prototype](docs/images/workshop_prototype.png)
 
 ### Actual Product
 Head down to Makerthon 2019 on the 7th of January to see our product live!  
-![WITS Robot](images/wits_robot.png)
+![WITS Robot](docs/images/wits_robot.png)
 
 ## Future Developments
 1. Incorporate more games with tracking functionalities
